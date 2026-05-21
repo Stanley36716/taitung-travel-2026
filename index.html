@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>📱 台東五天四夜：山海慢活親子攻略</title>
+    <style>
+        :root {
+            --primary: #0f4c5c;
+            --primary-light: #e5f1f4;
+            --secondary: #e36414;
+            --secondary-light: #fff3eb;
+            --map-blue: #1a73e8;
+            --map-bg: #e8f0fe;
+            --dark: #222222;
+            --gray: #666666;
+            --bg: #f4f6f8;
+            --card-bg: #ffffff;
+            --radius: 12px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", sans-serif;
+            background-color: var(--bg);
+            color: var(--dark);
+            line-height: 1.5;
+            padding-bottom: 75px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f4c5c 0%, #175e71 100%);
+            color: white;
+            padding: 25px 16px 20px 16px;
+            text-align: center;
+            border-bottom-left-radius: 16px;
+            border-bottom-right-radius: 16px;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        header p {
+            font-size: 0.88rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            padding: 12px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .notice-box {
+            background-color: #fff;
+            border-left: 4px solid var(--secondary);
+            padding: 12px;
+            border-radius: var(--radius);
+            margin-bottom: 16px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+            font-size: 0.88rem;
+        }
+        .notice-box h3 {
+            color: var(--primary);
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+
+        .day-section {
+            margin-bottom: 24px;
+            scroll-margin-top: 15px;
+        }
+
+        .day-header-card {
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 14px;
+            border-top-left-radius: var(--radius);
+            border-top-right-radius: var(--radius);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .day-header-card h2 {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .day-badge {
+            background-color: var(--secondary);
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        .day-body {
+            background: var(--card-bg);
+            border-bottom-left-radius: var(--radius);
+            border-bottom-right-radius: var(--radius);
+            padding: 14px 12px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+        }
+
+        .route-desc {
+            background-color: var(--primary-light);
+            color: var(--primary);
+            font-size: 0.85rem;
+            padding: 8px 10px;
+            border-radius: 6px;
+            margin-bottom: 14px;
+            font-weight: 500;
+        }
+
+        .timeline {
+            position: relative;
+            border-left: 2px solid #e9ecef;
+            padding-left: 16px;
+            margin-left: 8px;
+        }
+
+        .item-slot {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .item-slot:last-child {
+            margin-bottom: 0;
+        }
+
+        .item-slot::before {
+            content: "";
+            position: absolute;
+            left: -23px;
+            top: 4px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--secondary);
+            border: 2px solid white;
+        }
+
+        .meta-row {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 4px;
+            flex-wrap: wrap;
+        }
+
+        .time-lbl {
+            background-color: #333;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: bold;
+            padding: 1px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+
+        .tag-lbl {
+            font-size: 0.75rem;
+            font-weight: bold;
+            padding: 1px 6px;
+            border-radius: 4px;
+        }
+        .tag-lbl.attraction { background-color: #e8f5e9; color: #2e7d32; }
+        .tag-lbl.food { background-color: #fff3e0; color: #ef6c00; }
+        .tag-lbl.hotel { background-color: #e8eaf6; color: #283593; }
+
+        .title-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 6px;
+        }
+
+        .item-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .map-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background-color: var(--map-bg);
+            color: var(--map-blue);
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: bold;
+            white-space: nowrap;
+            border: 1px solid #cbd5e1;
+            min-height: 32px;
+            transition: all 0.2s;
+        }
+        .map-btn:active {
+            background-color: #d2e3fc;
+            transform: scale(0.95);
+        }
+
+        .desc-box {
+            font-size: 0.88rem;
+            color: #444444;
+            background-color: #fafafa;
+            padding: 10px;
+            border-radius: 6px;
+            border-left: 3px solid #cbd5e1;
+        }
+
+        .hl {
+            color: var(--secondary);
+            font-weight: bold;
+        }
+
+        .table-section {
+            margin-top: 20px;
+            background: white;
+            border-radius: var(--radius);
+            padding: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+            scroll-margin-top: 15px;
+        }
+        .table-section h2 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 4px;
+        }
+        
+        .compact-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 0.85rem;
+        }
+        .compact-row:last-child {
+            border-bottom: none;
+        }
+        .shop-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        .shop-name {
+            font-weight: bold;
+            color: #111;
+        }
+        .shop-dish {
+            font-size: 0.78rem;
+            color: var(--gray);
+        }
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-around;
+            padding: 6px 0 max(6px, env(safe-area-inset-bottom));
+            z-index: 2000;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: var(--gray);
+            text-decoration: none;
+            font-size: 0.68rem;
+            font-weight: bold;
+            width: 16%;
+            min-height: 44px;
+            justify-content: center;
+        }
+
+        .nav-item span.icon {
+            font-size: 1.1rem;
+            margin-bottom: 2px;
+        }
+
+        .nav-item:active, .nav-item.active {
+            color: var(--primary);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 10px 40px 10px;
+            font-size: 0.78rem;
+            color: var(--gray);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🌿 台東五天四夜：山海慢活親子攻略</h1>
+        <p>首晚「娜路灣花園酒店」• 續住「陶趣漫旅飯店」• 直航租車自駕</p>
+    </header>
+
+    <div class="container">
+        
+        <div id="info" class="notice-box">
+            <h3>💡 專屬動態導航提示</h3>
+            <p>本指南已剔除歇業店家，改換熱門地道美食。點擊各項目的 🗺️ 地圖 按鈕即可直接開啟手機 Google Maps 進行即時導航與查看營業時間！</p>
+        </div>
+
+        <div id="d1" class="day-section">
+            <div class="day-header-card">
+                <h2>Day 1：抵達與鐵道文化微光 (市區)</h2>
+                <span class="day-badge">D1</span>
+            </div>
+            <div class="day-body">
+                <div class="route-desc">🚙 沿途景觀：從火車站進入市區，沿路可見開闊的卑南大溪景觀與遠方的都蘭山。</div>
+                <div class="timeline">
+                    
+                    <div class="item-slot">
+                        <div class="meta-row">
+                            <span class="time-lbl">11:30</span>
+                            <span class="tag-lbl hotel">🚗 交通/住宿</span>
+                        </div>
+                        <div class="title-row">
+                            <div class="item-title">直航租車取車 & 娜路灣花園酒店 Check-in</div>
+                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=直航租車台東站" target="_blank">🗺️ 地圖</a>
+                        </div>
+                        <div class="desc-box">
+                            抵達台東站後完成 <span class="hl">直航租車</span> 取車手續，開啟自駕假期。隨後前往 <span class="hl">娜路灣花園酒店</span> 辦理寄放行李與整備。
+                        </div>
+                    </div>
+
+                    <div class="item-slot">
+                        <div class="meta-row">
+                            <span class="time-lbl">12:30</span>
+                            <span class="tag-lbl food">🍲 午餐</span>
+                        </div>
+                        <div class="title-row">
+                            <div class="item-title">正海城北方小館</div>
+                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=正海城北方小館" target="_blank">🗺️ 地圖</a>
+                        </div>
+                        <div class="desc-box">
+                            <span class="hl">【必吃】：千層餅、酸菜白肉鍋</span>。眷村風情濃厚，酥脆的手工餅皮非常符合小孩子的口味。
+                        </div>
+                    </div>
+
+                    <div class="item-slot">
+                        <div class="meta-row">
+                            <span class="time-lbl">14:30</span>
+                            <span class="tag-lbl attraction">📍 景點</span>
+                        </div>
+                        <div class="title-row">
+                            <div class="item-title">台東故事館</div>
+                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=台東故事館" target="_blank">🗺️ 地圖</a>
+                        </div>
+                        <div class="desc-box">
+                            <span class="hl">【必看】：日式老建築的內部構造</span>。<span class="hl">【必買】：台東限定文創明信片</span>，可帶孩子在充滿書香的空間靜心體驗。
+                        </div>
+                    </div>
+
+                    <div class="item-slot">
+                        <div class="meta-row">
+                            <span class="time-lbl">17:30</span>
+                            <span class="tag-lbl attraction">📍 景點</span>
+                        </div>
+                        <div class="title-row">
+                            <div class="item-title">鐵道藝術村 (鐵花村)</div>
+                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=台東鐵道藝術村" target="_blank">🗺️ 地圖</a>
+                        </div>
+                        <div class="desc-box">
+                            <span class="hl">【必看】：鐵花村熱氣球燈海、TTstyle波浪屋建築造型</span>。入夜後微光點點，極具浪漫文藝氣息。
+                        </div>
+                    </div>
+
+                    <div class="item-slot">
+                        <div class="meta-row">
+                            <span class="time-lbl">19:00</span>
+                            <span class="tag-lbl food">🍲 晚餐</span>
+                        </div>
+                        <div class="title-row">
+                            <div class="item-title">鄰家蒸餃</div>
+                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=鄰家蒸餃" target="_blank">🗺️ 地圖</a>
+                        </div>
+                        <div class="desc-box">
+                            <span class="hl">【必吃】：鮮肉蒸餃、酸辣湯</span>。市區高評價常民美食，皮薄餡多且多汁。
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="d2" class="day-section">
+            <div class="day-header-card">
+                <h2>Day 2：牧場與茶文化的清涼體驗 (縱谷線)</h2>
+                <span class="day-badge">D2</span>
+            </div>
+            <div class="day-body">
+                <div class="route-desc">🚙 沿途景觀：台9線縱谷段，兩側是連綿的中央山脈與海岸山脈，滿目翠綠的茶園與牧草地。</div>
+                <div class="timeline">
+                    
+                    <div class="item-slot">
+                        <div class="meta-row">
+                            <span class="time-lbl">08:00</span>
+                            <span class="tag-lbl hotel">🏨 飯店早餐</span>
+                        </div>
+                        <div class="title-row">
+                            <div class="item-title">享用娜路灣花園酒店早餐 & 退房</div>
+                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=娜路灣花園酒店" target="_blank">🗺️ 地圖</a>
+                        </div>
+                        <div class="desc-box">
+                            於飯店內悠閒享用完豐盛早餐後辦理退房，隨即驅車北上縱谷，展開充滿芬多精的清新一日遊。
+                        </div>
+                    </div>
+
+                    <div class="item-slot">
+                        <div class="meta-row">
+                            <span class="time-lbl">09:30</span>
+                            <span class="tag-lbl attraction">📍 景點</span>
+                        </div>
+                        <div class="title-row">
+                            <div class="item-title">初鹿牧場</div>
+                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=初鹿牧場" target="_blank">🗺️ 地圖</a>
+                        </div>
+                        <div class="desc-box">
+                            <span class="hl">【必看】：滾草區的放牧牛群</span>。<span class="hl">【必吃】：鮮奶饅頭、鮮奶冰淇淋</span>。大片綠地非常適合孩子奔跑餵牛。
+                        </div>
+                    </div>
+
+                    <div class="item-slot">
+                        <div class="meta-row">
+                            <span class="time-lbl">12:00</span>
+                            <span class="tag-lbl food">🍲 午餐</span>
+                        </div>
+                        <div class="title-row">
+                            <div class="item-title">原生應用植物園</div>
+                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=台東原生應用植物園" target="_blank">🗺️ 地圖</a>
+                        </div>
+                        <div class="desc-box">
+                            <span class="hl">【必吃】：特色野菜鍋</span>（推薦紅甜菜、飛機菜無限享用）。<span class="hl">【必買】：白鶴靈芝茶、雷公根推拿霜</span>。吃飽後還能帶孩子到牧場區餵食溫馴的羊羔。
+                        </div>
+                    </div>
+
+                    <div class="item-slot">
+                        <div class="meta-row">
+                            <span class="time-lbl">14:30</span>
+                            <span class="tag-lbl attraction">📍 景點</span>
+                        </div>
+                        <div class="title-row">
+                            <div class="item-title">台東糖廠文化園區</div>
+                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=台東糖廠文化園區" target="_blank">🗺️ 地圖</a>
+                        </div>
+                        <div class="desc-box">
+                            <span class="hl">【必看】：巨型舊機具改裝的裝置藝術、萬富商號</span>。充滿重工業混搭文青風的閒適園區。
+                        </div>
+                    </div>
+
+                    <div class="item-slot">
+                        <div class="meta-row">
+                            <span class="time-lbl">18:00</span>
+                            <span class="tag-lbl food">🍲 晚餐</span>
+                        </div>
+                        <div class="title-row">
+                            <div class="item-title">歲月靜好餐酒館 (Strolling)</div>
+                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=歲月靜好餐酒館" target="_blank">🗺️ 地圖</a>
+                        </div>
+                        <div class="desc-box">
+                            <span class="hl">【精選更換】：精緻質感的創新台菜歐陸餐酒館</span>，特別選用台東在地小農食材入菜。<span class="hl">【推薦】：剝皮辣椒雞肉麵、慢烤特製豬肉料理</span>。餐後前往 <span class="hl">陶趣漫旅飯店</span> 辦理 Check-in。
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="d3" class="day-section">
+            <div class="day-header-card">
+                <h2>Day 3：金黃稻浪與火車便當巡禮 (池上深度遊)</h2>
+                <span class="day-badge">D3</span>
+            </div>
+            <div class="day-body">
+                <div class="route-desc">🚙 沿途景觀：著名的稻米之鄉，6月正值收割前，可見一望無際的金黃稻浪與著名的「沒有電線桿」純淨景觀。</div>
+                <div class="timeline">
+                    
+                    <div class="item-slot">
+                        <div class="meta-row">
+                            <span class="time-lbl">09:30</span>
+                            <span class="tag-lbl attraction">📍 景點</span>
+                        </div>
+                        <div class="title-row">
+                            <div class="item-title">伯朗大道 & 天堂路</div>
+                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=池上伯朗大道" target="_blank">🗺️ 地圖</a>
+                        </div>
+                        <div class="desc-box">
+                            <span class="hl">【必看】：金城武樹、S型的天堂路</span>。強烈建議在入口租借「電動輔助自行車」，迎風漫遊於金黃色稻田浪潮之中。
+                        </div>
+                    </div>
+
+                    <div class="item-slot">
+                        <div class="meta-row">
+                            <span class="time-lbl">12:00</span>
+                            <span class="tag-lbl food">🍲 午餐</span>
+                        </div>
+                        <div class="title-row">
+                            <div class="item-title">池上飯包文化故事館</div>
+                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=池上飯包文化故事館" target="_blank">🗺️ 地圖</a>
+                        </div>
+                        <div class="desc-box">
+                            <span class="hl">【必吃】：經典木片盒池上便當</span>。<span class="hl">【必看】：二樓的早期農耕具展示區</span>。還可以坐在懷舊的復古火車車廂內用餐。
+                        </div>
+                    </div>
+
+                    <div class="item-slot">
+                        <div class="meta-row">
+                            <span class="time-lbl">14:00</span>
+                            <span class="tag-lbl food">☕ 下午茶</span>
+                        </div>
+                        <div class="title-row">
+                            <div class="item-title">池上豆之間</div>
+                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=池上豆之間" target="_blank">🗺️ 地圖</a>
+                        </div>
+                        <div class="desc-box">
+                            由舊穀倉改建的在地文青風豆製物專賣店。<span class="hl">【必吃】：厚豆花、豆湯麵</span>，醇厚香濃。
+                        </div>
+                    </div>
+
+                    <div class="item-slot">
+                        <div class="meta-row">
+                            <span class="time-lbl">16:00</span>
+                            <span class="tag-lbl attraction">📍 景點</span>
+                        </div>
+                        <div class="title-row">
+                            <div class="item-title">關山米國學校</div>
+                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=關山米國學校" target="_blank">🗺️ 地圖</a>
+                        </div>
+                        <div class="desc-box">
+                            <span class="hl">【必看】：色彩斑斕的外牆彩繪、碾米過程展示</span>。<span class="hl">【必買】：關山米乖乖、精選關山米</span>。富含教育意義的農育體驗景點。
+                        </div>
+                    </div>
+
+                    <div class="item-slot">
+                        <div class="meta-row">
+                            <span class="time-lbl">18:30</span>
+                            <span class="tag-lbl food">🍲 晚餐</span>
+                        </div>
+                        <div class="title-row">
+                            <div class="item-title">鹿嘉農莊</div>
+                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=鹿嘉農莊" target="_blank">🗺️ 地圖</a>
+                        </div>
+                        <div class="desc-box">
+                            <span class="hl">【必吃】：職人研發的茶香特色料理</span>。運用在地茶葉元素入菜，精緻養生，為美好的一天收尾。隨後返回陶趣漫旅飯店。
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="d4" class="day-section">
+            <div class="day-header-card">
+                <h2>Day 4：南洋風情與史前文明探險 (海線)</h2>
+                <span class="day-badge">D4</span>
+            </div>
+            <div class="day-body">
+                <div class="route-desc">🚙 沿途景觀：沿台11線行駛，左手邊是高山，右手邊是蔚藍的太平洋，不時可見破碎的珊瑚礁石海岸。</div>
+                <div class="timeline">
+                    
+                    <div class="item-slot">
+                        <div class="meta-row">
+                            <span class="time-lbl">10:00</span>
+                            <span class="tag-lbl attraction">📍 景點</span>
+                        </div>
+                        <div class="title-row">
+                            <div class="item-title">富山護漁步道</div>
+                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=富山護漁區" target="_blank">🗺️ 地圖</a>
+                        </div>
+                        <div class="desc-box">
+                            <span class="hl">【必看】：透明清澈的海水與潮間帶螃蟹、魚群</span>。走在海上高架木棧道，近距離親親海洋生態。
+                        </div>
+                    </div>
+
+                    <div class="item-slot">
+                        <div class="meta-row">
+                            <span class="time-lbl">12:00</span>
+                            <span class="tag-lbl food">🍲 午餐</span>
+                        </div>
+                        <div class="title-row">
+                            <div class="item-title">可可娜咖啡館</div>
+                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=可可娜咖啡" target="_blank">🗺️ 地圖</a>
+                        </div>
+                        <div class="desc-box">
+                            <span class="hl">【必看】：從茅草屋望出去的絕美海景</span>、高大椰林，彷彿置身國外度假島嶼。<span class="hl">【必吃】：南洋風味點心、沁涼椰子水</span>。
+                        </div>
+                    </div>
+
+                    <div class="item-slot">
+                        <div class="meta-row">
+                            <span class="time-lbl">14:30</span>
+                            <span class="tag-lbl attraction">📍 景點</span>
+                        </div>
+                        <div class="title-row">
+                            <div class="item-title">國立臺灣史前文化博物館</div>
+                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=國立臺灣史前文化博物館" target="_blank">🗺️ 地圖</a>
+                        </div>
+                        <div class="desc-box">
+                            館內空間舒適、冷氣涼爽！<span class="hl">【必看】：太陽廣場的巨型石柱、沈浸式史前劇場</span>，互動式常設展區非常適合學齡孩子探索。
+                        </div>
+                    </div>
+
+                    <div class="item-slot">
+                        <div class="meta-row">
+                            <span class="time-lbl">18:30</span>
+                            <span class="tag-lbl food">🍲 晚餐</span>
+                        </div>
+                        <div class="title-row">
+                            <div class="item-title">米巴奈山地美食坊</div>
+                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=米巴奈山地美食坊" target="_blank">🗺️ 地圖</a>
+                        </div>
+                        <div class="desc-box">
+                            <span class="hl">【特色】：精緻化呈現原民傳統食材</span>，環境寬敞舒適。<span class="hl">【必吃】：糯米飯、烤春筍</span>。餐後返回陶趣漫旅飯店休息。
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="d5" class="day-section">
+            <div class="day-header-card">
+                <h2>Day 5：森林單車與返家之路</h2>
+                <span class="day-badge">D5</span>
+            </div>
+            <div class="day-body">
+                <div class="route-desc">🚙 沿途景觀：位於出海口的黑森林公園，擁有平緩的林道與如鏡面般的湖泊景觀。</div>
+                <div class="timeline">
+                    
+                    <div class="item-slot">
+                        <div class="meta-row">
+                            <span class="time-lbl">08:30</span>
+                            <span class="tag-lbl attraction">📍 景點</span>
+                        </div>
+                        <div class="title-row">
+                            <div class="item-title">台東森林公園 (黑森林單車)</div>
+                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=台東森林公園" target="_blank">🗺️ 地圖</a>
+                        </div>
+                        <div class="desc-box">
+                            大片木麻黃防風林簇擁。<span class="hl">【必看】：如夢似幻的琵琶湖、活水湖</span>，推薦租自行車穿梭林道，享受清新晨光。
+                        </div>
+                    </div>
+
+                    <div class="item-slot">
+                        <div class="meta-row">
+                            <span class="time-lbl">10:30</span>
+                            <span class="tag-lbl food">🛍️ 伴手禮</span>
+                        </div>
+                        <div class="title-row">
+                            <div class="item-title">台東市農會 (山海經選物)</div>
+                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=台東市農會山海經選物" target="_blank">🗺️ 地圖</a>
+                        </div>
+                        <div class="desc-box">
+                            高質感在地農特產選品店。<span class="hl">【必買】：洛神花乾、夏威夷豆塔、台東紅藜</span>，將台東在地風味打包帶回家。
+                        </div>
+                    </div>
+
+                    <div class="item-slot">
+                        <div class="meta-row">
+                            <span class="time-lbl">11:30</span>
+                            <span class="tag-lbl food">🍲 午餐</span>
+                        </div>
+                        <div class="title-row">
+                            <div class="item-title">藍蜻蜓速食專賣店</div>
+                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=藍蜻蜓速食專賣店" target="_blank">🗺️ 地圖</a>
+                        </div>
+                        <div class="desc-box">
+                            台東超人氣經典台式炸雞名店。<span class="hl">【必吃】：藍蜻蜓全餐</span>（雞腿、雞翅、雞塊一次滿足），外酥內嫩爆汁。
+                        </div>
+                    </div>
+
+                    <div class="item-slot">
+                        <div class="meta-row">
+                            <span class="time-lbl">12:45</span>
+                            <span class="tag-lbl hotel">🚗 還車</span>
+                        </div>
+                        <div class="title-row">
+                            <div class="item-title">加滿油箱，直航租車還車</div>
+                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=直航租車台東站" target="_blank">🗺️ 地圖</a>
+                        </div>
+                        <div class="desc-box">
+                            駕車返回火車站旁的直航租車服務據點辦理結清還車事宜。
+                        </div>
+                    </div>
+
+                    <div class="item-slot">
+                        <div class="meta-row">
+                            <span class="time-lbl">13:00</span>
+                            <span class="tag-lbl hotel">🚂 歸途</span>
+                        </div>
+                        <div class="title-row">
+                            <div class="item-title">台東火車站搭車返家</div>
+                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=台東火車站" target="_blank">🗺️ 地圖</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="food-list" class="table-section">
+            <h2>📊 行程餐廳速查對照表</h2>
+            
+            <div class="compact-row">
+                <div class="shop-info">
+                    <span class="shop-name">正海城北方小館 (D1 午餐)</span>
+                    <span class="shop-dish">手工千層餅、香濃酸菜白肉鍋</span>
+                </div>
+            </div>
+
+            <div class="compact-row">
+                <div class="shop-info">
+                    <span class="shop-name">鄰家蒸餃 (D1 晚餐)</span>
+                    <span class="shop-dish">皮薄汁多鮮肉蒸餃、家常酸辣湯</span>
+                </div>
+            </div>
+
+            <div class="compact-row">
+                <div class="shop-info">
+                    <span class="shop-name">原生應用植物園 (D2 午餐)</span>
+                    <span class="shop-dish">鮮採特色野菜養生火鍋（紅甜菜、飛機菜）</span>
+                </div>
+            </div>
+
+            <div class="compact-row">
+                <div class="shop-info">
+                    <span class="shop-name">歲月靜好餐酒館 Strolling (D2 晚餐)</span>
+                    <span class="shop-dish">特製剝皮辣椒雞肉麵、在地小農創意歐陸料理</span>
+                </div>
+            </div>
+
+            <div class="compact-row">
+                <div class="shop-info">
+                    <span class="shop-name">池上飯包文化故事館 (D3 午餐)</span>
+                    <span class="shop-dish">經典木片盒正宗池上鐵路便當</span>
+                </div>
+            </div>
+
+            <div class="compact-row">
+                <div class="shop-info">
+                    <span class="shop-name">池上豆之間 (D3 下午茶)</span>
+                    <span class="shop-dish">濃郁古早味厚豆花、獨特豆湯麵</span>
+                </div>
+            </div>
+
+            <div class="compact-row">
+                <div class="shop-info">
+                    <span class="shop-name">鹿嘉農莊 (D3 晚餐)</span>
+                    <span class="shop-dish">職人專屬茶香創意特色料理</span>
+                </div>
+            </div>
+
+            <div class="compact-row">
+                <div class="shop-info">
+                    <span class="shop-name">可可娜咖啡館 (D4 午餐)</span>
+                    <span class="shop-dish">南洋風味點心、沁涼消暑現剖椰子水</span>
+                </div>
+            </div>
+
+            <div class="compact-row">
+                <div class="shop-info">
+                    <span class="shop-name">米巴奈山地美食坊 (D4 晚餐)</span>
+                    <span class="shop-dish">原民傳統風味糯米飯、原味脆口烤春筍</span>
+                </div>
+            </div>
+
+            <div class="compact-row">
+                <div class="shop-info">
+                    <span class="shop-name">藍蜻蜓速食專賣店 (D5 午餐)</span>
+                    <span class="shop-dish">經典台式傳統藍蜻蜓全餐（雞腿/雞翅/雞塊）</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="bottom-nav">
+        <a href="#d1" class="nav-item">
+            <span class="icon">❶</span>
+            <span>第一天</span>
+        </a>
+        <a href="#d2" class="nav-item">
+            <span class="icon">❷</span>
+            <span>第二天</span>
+        </a>
+        <a href="#d3" class="nav-item">
+            <span class="icon">❸</span>
+            <span>第三天</span>
+        </a>
+        <a href="#d4" class="nav-item">
+            <span class="icon">❹</span>
+            <span>第四天</span>
+        </a>
+        <a href="#d5" class="nav-item">
+            <span class="icon">❺</span>
+            <span>第五天</span>
+        </a>
+        <a href="#food-list" class="nav-item">
+            <span class="icon">📊</span>
+            <span>美食</span>
+        </a>
+    </div>
+
+    <footer>
+        <p>🌿 祝您與家人擁有完美的台東山海假期 🌿</p>
+        <p style="opacity: 0.5; margin-top: 5px; font-size: 0.72rem;">Production Ready Layout for GitHub Pages</p>
+    </footer>
+
+</body>
+</html>
