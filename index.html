@@ -1,689 +1,1294 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>📱 台東五天四夜：山海慢活親子攻略</title>
-    <style>
-        :root {
-            --primary: #0f4c5c;
-            --primary-light: #e5f1f4;
-            --secondary: #e36414;
-            --secondary-light: #fff5eb;
-            --bg: #f4f6f8;
-            --card: #ffffff;
-            --text-main: #222222;
-            --text-sub: #666666;
-            --radius: 14px;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background-color: var(--bg); color: var(--text-main); line-height: 1.6; padding-bottom: 90px; scroll-behavior: smooth; }
-        
-        /* 頂部 Header */
-        header { background: linear-gradient(135deg, #0f4c5c 0%, #175e71 100%); color: white; padding: 30px 16px 20px; text-align: center; border-radius: 0 0 20px 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
-        header h1 { font-size: 1.4rem; font-weight: 700; margin-bottom: 6px; letter-spacing: 0.5px; }
-        header p { font-size: 0.85rem; opacity: 0.9; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>台東五天四夜親子行程 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --terra:#C1622A;--terra-l:#F7EDE3;--terra-d:#8B3D14;
+  --sand:#F2EADB;--sand-d:#DDD0B8;
+  --green:#2D5016;--green-m:#4A7C2A;--green-l:#E8F0DC;
+  --blue:#1B5E82;--blue-l:#D6EAF5;
+  --gold:#8B6914;--gold-l:#FBF0D6;
+  --ink:#2A2015;--ink-m:#5A4830;--ink-s:#9A8870;
+  --bg:#FAF6EF;--white:#FFFDF8;
+  --warn-bg:#FEF0E6;--warn:#8B3D14;
+  --r:10px
+}
+html{font-size:15px;-webkit-text-size-adjust:100%}
+body{font-family:'Noto Sans TC',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;padding-bottom:68px}
+a{color:inherit;text-decoration:none}
 
-        .container { max-width: 600px; margin: 0 auto; padding: 12px; }
-        
-        /* 每日日程外盒 */
-        .day-section { margin-bottom: 28px; scroll-margin-top: 15px; }
-        .day-header { background: var(--primary); color: white; padding: 12px 16px; border-radius: var(--radius) var(--radius) 0 0; font-weight: bold; font-size: 1.05rem; display: flex; justify-content: space-between; align-items: center; }
-        .day-badge { background: var(--secondary); padding: 3px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 600; }
-        .day-body { background: var(--card); padding: 16px 14px; border-radius: 0 0 var(--radius) var(--radius); box-shadow: 0 4px 10px rgba(0,0,0,0.04); }
-        
-        .route-desc { background: var(--primary-light); color: var(--primary); font-size: 0.85rem; padding: 10px 12px; border-radius: 8px; margin-bottom: 16px; font-weight: 500; border-left: 4px solid var(--primary); }
-        
-        /* 時間軸線條 */
-        .timeline { border-left: 2px solid #e2e8f0; padding-left: 16px; margin-left: 6px; }
-        .item { position: relative; margin-bottom: 24px; }
-        .item:last-child { margin-bottom: 0; }
-        .item::before { content: ""; position: absolute; left: -23px; top: 5px; width: 10px; height: 10px; border-radius: 50%; background-color: var(--secondary); border: 2px solid white; box-shadow: 0 0 0 2px rgba(227,100,20,0.2); }
-        
-        .time { display: inline-block; background: #334155; color: #fff; font-size: 0.75rem; padding: 2px 8px; border-radius: 4px; font-weight: 600; margin-bottom: 6px; }
-        
-        /* 標題列與地圖按鈕同行（強制不換行，按鈕鎖定最右側） */
-        .title-wrapper { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; flex-wrap: nowrap; gap: 8px; width: 100%; }
-        .title { font-size: 1.05rem; font-weight: bold; color: var(--primary); flex: 1 1 auto; line-height: 1.4; }
-        .map-btn-group { display: flex; gap: 4px; flex: 0 0 auto; }
+/* HERO */
+.hero{background:linear-gradient(150deg,var(--green) 0%,#1a3a0a 55%,var(--terra-d) 100%);color:#fff;padding:28px 16px 24px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(255,255,255,.025) 0,rgba(255,255,255,.025) 1px,transparent 0,transparent 50%) 0 0/10px 10px;pointer-events:none}
+.hero-inner{position:relative;max-width:600px;margin:0 auto}
+.hero-tag{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:3px 11px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;color:#d8f0c0}
+.hero h1{font-family:'Noto Serif TC',serif;font-size:clamp(22px,5.5vw,36px);font-weight:700;line-height:1.25;margin-bottom:8px}
+.hero-sub{font-size:13px;color:rgba(255,255,255,.78);margin-bottom:16px;line-height:1.6}
+.hero-chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{background:rgba(255,255,255,.12);border-radius:8px;padding:5px 9px;font-size:12px;display:flex;align-items:center;gap:4px;line-height:1.3}
 
-        .desc { font-size: 0.88rem; color: #334155; background: #f8fafc; padding: 10px; border-radius: 8px; border-left: 3px solid #cbd5e1; margin-bottom: 8px; }
-        .hl { color: var(--secondary); font-weight: bold; }
-        
-        /* 社群高討論推薦外盒 */
-        .rec-box { background: var(--secondary-light); border: 1px dashed #fdba74; padding: 10px; border-radius: 8px; font-size: 0.82rem; color: #4b5563; margin-top: 8px; }
-        .rec-title { font-weight: bold; color: #c2410c; display: block; margin-bottom: 4px; font-size: 0.85rem; }
-        
-        /* 備案項目列（結構同主行程，將定位按鈕鎖定最右側） */
-        .rec-item { display: flex; align-items: center; justify-content: space-between; flex-wrap: nowrap; gap: 8px; width: 100%; margin-top: 6px; }
-        .rec-name { flex: 1 1 auto; line-height: 1.4; }
+/* WRAP */
+.wrap{max-width:600px;margin:0 auto;padding:0 14px}
 
-        /* 統一化地圖導航按鈕 */
-        .map-btn { display: inline-flex; align-items: center; justify-content: center; background: #e8f0fe; color: #1a73e8; padding: 4px 10px; border-radius: 8px; font-size: 0.75rem; font-weight: bold; text-decoration: none; border: 1px solid #d2e3fc; box-shadow: 0 1px 2px rgba(0,0,0,0.05); white-space: nowrap; flex: 0 0 auto; }
-        .map-btn:active { background: #d2e3fc; }
-        
-        /* 最後一頁總彙整區塊 */
-        .summary-section { margin-top: 15px; background: white; border-radius: var(--radius); padding: 18px 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); scroll-margin-top: 15px; }
-        .summary-section h2 { font-size: 1.2rem; color: var(--primary); margin-bottom: 14px; border-bottom: 2.5px solid var(--primary); padding-bottom: 6px; display: flex; align-items: center; }
-        .res-card { border-bottom: 1px dashed #e2e8f0; padding: 14px 0; }
-        .res-card:last-child { border-bottom: none; }
-        .res-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
-        .res-name { font-weight: bold; font-size: 0.95rem; color: #0f172a; }
-        .res-tag { font-size: 0.7rem; padding: 2px 8px; border-radius: 6px; font-weight: 600; }
-        .res-tag.main-eat { background: #dcfce7; color: #166534; }
-        .res-tag.backup-eat { background: #fef9c3; color: #854d0e; }
-        .res-dish { font-size: 0.82rem; color: #475569; margin-bottom: 8px; background: #f1f5f9; padding: 6px 10px; border-radius: 6px; }
-        
-        /* 手機底部固定導航列 */
-        .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255, 255, 255, 0.97); backdrop-filter: blur(6px); box-shadow: 0 -3px 12px rgba(0,0,0,0.08); display: flex; justify-content: space-around; padding: 8px 0; z-index: 1000; }
-        .nav-item { text-align: center; color: var(--text-sub); text-decoration: none; font-size: 0.7rem; font-weight: bold; flex: 1; transition: color 0.2s; }
-        .nav-item span { display: block; font-size: 1.1rem; margin-bottom: 1px; }
-        .nav-item:active { color: var(--primary); }
-    </style>
+/* LOGISTICS */
+.logi-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:16px 0 0}
+.logi-card{background:var(--white);border:1px solid var(--sand-d);border-radius:var(--r);padding:11px 13px}
+.logi-card h4{font-size:10px;letter-spacing:1.2px;text-transform:uppercase;color:var(--ink-s);margin-bottom:4px}
+.logi-card p{font-size:13px;font-weight:500;color:var(--ink)}
+.logi-sub{font-size:11.5px;color:var(--ink-s);margin-top:3px;line-height:1.45}
+.logi-card a{color:var(--blue)}
+
+/* NOTICE */
+.notice{background:var(--gold-l);border:1px solid #D4A84A;border-radius:var(--r);padding:12px 14px;margin:12px 0 0}
+.notice h4{font-size:13px;font-weight:700;color:var(--gold);margin-bottom:7px}
+.notice-list{list-style:none;padding:0}
+.notice-list li{font-size:12.5px;color:var(--ink-m);margin-bottom:5px;padding-left:18px;position:relative;line-height:1.5}
+.notice-list li::before{content:'✓';position:absolute;left:0;color:var(--green-m);font-size:11px}
+.notice-list li.warn::before{content:'⚠';color:var(--terra)}
+
+/* BOTTOM NAV */
+.day-nav{position:fixed;bottom:0;left:0;right:0;background:rgba(255,253,248,.97);border-top:1px solid var(--sand-d);display:flex;overflow-x:auto;scrollbar-width:none;z-index:200;padding:8px 10px;gap:6px;-webkit-overflow-scrolling:touch;backdrop-filter:blur(4px)}
+.day-nav::-webkit-scrollbar{display:none}
+.day-nav a{flex-shrink:0;padding:7px 14px;font-size:12.5px;font-weight:500;color:var(--ink-m);border-radius:20px;border:1px solid var(--sand-d);white-space:nowrap;transition:background .15s,color .15s;-webkit-tap-highlight-color:transparent}
+.day-nav a:active{background:var(--terra);color:#fff;border-color:var(--terra)}
+
+/* DAY SECTIONS */
+.day-section{margin-top:36px}
+.day-hdr{display:flex;align-items:flex-start;gap:11px;margin-bottom:14px}
+.day-badge{background:var(--terra);color:#fff;border-radius:8px;padding:7px 11px;text-align:center;flex-shrink:0;min-width:56px}
+.day-num{font-family:'Noto Serif TC',serif;font-size:19px;font-weight:700;line-height:1}
+.day-lbl{font-size:10px;letter-spacing:.5px;opacity:.85;margin-top:2px}
+.day-info h2{font-family:'Noto Serif TC',serif;font-size:17px;font-weight:700;color:var(--ink);line-height:1.35}
+.day-meta{font-size:12px;color:var(--ink-s);margin-top:2px}
+.route-tip{font-size:12px;background:var(--green-l);border-left:3px solid var(--green-m);border-radius:0 6px 6px 0;padding:7px 10px;color:var(--green);margin-top:8px;line-height:1.5}
+
+/* TIMELINE */
+.timeline{position:relative}
+.tl-line{position:absolute;left:32px;top:8px;bottom:8px;width:1.5px;background:var(--sand-d)}
+.tl-item{display:grid;grid-template-columns:64px 1fr;gap:0 12px;margin-bottom:6px;position:relative}
+.tl-time{text-align:right;padding-top:13px;font-size:12px;font-weight:700;color:var(--terra);letter-spacing:.3px;position:relative;z-index:1;line-height:1.2}
+.tl-dot{position:absolute;right:-18px;top:18px;width:8px;height:8px;border-radius:50%;background:var(--terra);border:2px solid var(--bg);z-index:2}
+.tl-card{background:var(--white);border:1px solid var(--sand-d);border-radius:var(--r);padding:12px 13px;margin-bottom:4px;position:relative}
+.tl-card.meal{border-left:3px solid var(--terra)}
+.tl-card.spot{border-left:3px solid var(--blue)}
+.tl-card.snack{border-left:3px solid var(--gold)}
+.tl-card.hotel{background:var(--green-l);border-color:var(--green-m)}
+.tl-card-hdr{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.tl-title{font-size:14.5px;font-weight:700;color:var(--ink);flex:1;line-height:1.35}
+.badge{display:inline-block;font-size:10px;padding:2px 7px;border-radius:10px;font-weight:500;white-space:nowrap;vertical-align:middle;margin-left:4px}
+.b-meal{background:var(--terra-l);color:var(--terra-d)}
+.b-spot{background:var(--blue-l);color:var(--blue)}
+.b-snack{background:var(--gold-l);color:var(--gold)}
+.b-hotel{background:var(--green-l);color:var(--green)}
+.b-warn{background:var(--warn-bg);color:var(--warn)}
+.star{font-size:11.5px;color:var(--gold);margin-top:3px;line-height:1.4}
+.map-btn{display:inline-flex;align-items:center;gap:4px;font-size:11.5px;color:var(--blue);background:var(--blue-l);padding:4px 9px;border-radius:6px;flex-shrink:0;white-space:nowrap;min-height:32px;-webkit-tap-highlight-color:transparent}
+.map-btn:active{background:var(--blue);color:#fff}
+.tl-desc{font-size:13px;color:var(--ink-m);margin-top:8px;line-height:1.65}
+.tl-tip{font-size:12.5px;color:var(--terra-d);background:var(--terra-l);border-radius:6px;padding:6px 10px;margin-top:8px;display:flex;gap:5px;align-items:flex-start;line-height:1.5}
+.tl-tip::before{content:'✦';flex-shrink:0;margin-top:1px}
+.tl-warn{font-size:12.5px;color:var(--warn);background:var(--warn-bg);border-radius:6px;padding:6px 10px;margin-top:8px;display:flex;gap:5px;align-items:flex-start;line-height:1.5}
+.tl-warn::before{content:'⚠';flex-shrink:0;margin-top:1px}
+.drive{grid-column:1/-1;display:flex;align-items:center;gap:6px;padding:4px 0 4px 70px;font-size:11.5px;color:var(--ink-s)}
+.drive-tag{background:var(--sand);border-radius:5px;padding:2px 8px;color:var(--ink-s)}
+
+/* FOOD HIGHLIGHT (inside card) */
+.food-must{margin-top:8px}
+.food-must-title{font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:var(--ink-s);margin-bottom:4px}
+.food-pills{display:flex;flex-wrap:wrap;gap:5px}
+.food-pill{font-size:12px;background:var(--sand);border-radius:20px;padding:3px 10px;color:var(--ink-m)}
+.food-pill.hot{background:var(--terra-l);color:var(--terra-d)}
+
+/* BACKUP */
+.backup-wrap{margin-top:10px}
+.backup-lbl{font-size:11px;color:var(--ink-s);letter-spacing:.5px;margin-bottom:5px}
+.backup-list{display:flex;flex-direction:column;gap:6px}
+.bk-card{background:var(--sand);border:1px solid var(--sand-d);border-radius:8px;padding:9px 11px;display:flex;align-items:center;gap:8px}
+.bk-info{flex:1}
+.bk-name{font-size:13px;font-weight:700;color:var(--ink);line-height:1.3}
+.bk-desc{font-size:12px;color:var(--ink-s);margin-top:2px;line-height:1.4}
+.bk-map{display:inline-flex;align-items:center;font-size:11px;color:var(--blue);background:var(--blue-l);padding:4px 8px;border-radius:5px;flex-shrink:0;min-height:30px;-webkit-tap-highlight-color:transparent}
+.bk-map:active{background:var(--blue);color:#fff}
+
+/* FOOD DAILY SUMMARY */
+.food-section{margin-top:24px}
+.food-section h3{font-size:13px;font-weight:700;color:var(--ink-s);letter-spacing:.8px;text-transform:uppercase;padding:0 0 8px;border-bottom:1px solid var(--sand-d);margin-bottom:10px}
+.food-row{display:flex;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid var(--sand);min-height:48px;-webkit-tap-highlight-color:transparent}
+.food-row:last-child{border-bottom:none}
+.food-type{font-size:11px;font-weight:700;color:var(--terra-d);background:var(--terra-l);padding:2px 8px;border-radius:10px;flex-shrink:0;text-align:center;min-width:38px}
+.food-row-info{flex:1}
+.food-row-name{font-size:13.5px;font-weight:700;color:var(--ink)}
+.food-row-note{font-size:12px;color:var(--ink-s);margin-top:1px;line-height:1.4}
+.food-row-map{display:inline-flex;font-size:11px;color:var(--blue);background:var(--blue-l);padding:4px 8px;border-radius:5px;flex-shrink:0;min-height:30px;align-items:center;-webkit-tap-highlight-color:transparent}
+.food-row-map:active{background:var(--blue);color:#fff}
+
+/* SECTION DIVIDER */
+.sec-divider{height:1px;background:var(--sand-d);margin:32px 0 0}
+
+/* FOOTER */
+footer{text-align:center;padding:24px 16px 16px;font-size:11.5px;color:var(--ink-s);line-height:1.7}
+</style>
 </head>
 <body>
 
-<header>
-    <h1>🌿 台東五天四夜親子慢活攻略</h1>
-    <p>完美相容手機自駕版・精準 Google Map 官方定位與導航</p>
-</header>
-
-<div class="container">
-
-    <div id="d1" class="day-section">
-        <div class="day-header">
-            <span>Day 1：抵達與鐵道文化微光</span>
-            <span class="day-badge">台東市區</span>
-        </div>
-        <div class="day-body">
-            <div class="route-desc">🚙 沿途景觀：從火車站進入市區，沿路可見開闊的卑南大溪景觀與遠方的都蘭山。</div>
-            <div class="timeline">
-                <div class="item">
-                    <span class="time">11:30</span>
-                    <div class="title-wrapper">
-                        <div class="title">抵達台東站取車與寄放行李</div>
-                        <div class="map-btn-group">
-                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=直航租車x台東站前店" target="_blank">🗺️ 租車</a>
-                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=娜路灣花園酒店" target="_blank">🗺️ 飯店</a>
-                        </div>
-                    </div>
-                    <div class="desc">於火車站旁 <span class="hl">直航租車（台東站）</span> 辦理取車，隨後開車前往第一晚入住的 <span class="hl">娜路灣花園酒店</span> 寄放行李。</div>
-                </div>
-                <div class="item">
-                    <span class="time">12:30</span>
-                    <div class="title-wrapper">
-                        <div class="title">午餐：正海城北方小館</div>
-                        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=正海城北方小館" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="desc">從車站開車約 10 分鐘。<span class="hl">必吃</span>：千層餅、酸菜白肉鍋。</div>
-                    <div class="rec-box">
-                        <span class="rec-title">🔥 社群高討論熱門備案（周邊2km）：</span>
-                        <div class="rec-item">
-                            <span class="rec-name">1. 榕樹下米苔目 (經典台東在地老味道)</span>
-                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=榕樹下米苔目" target="_blank">🗺️ 導航</a>
-                        </div>
-                        <div class="rec-item">
-                            <span class="rec-name">2. 阿鋐炸雞 正氣店 (爆汁台式傳統炸雞)</span>
-                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=阿鋐炸雞+正氣店" target="_blank">🗺️ 導航</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <span class="time">14:30</span>
-                    <div class="title-wrapper">
-                        <div class="title">台東糖廠文創園區</div>
-                        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=台東糖廠文創園區" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="desc">從餐廳開車約 8 分鐘。<span class="hl">必看</span>：巨型舊機具改裝的裝置藝術、創意特色小店（如萬富商號）。<span class="hl">必吃</span>：糖廠傳統特色冰棒。</div>
-                </div>
-                <div class="item">
-                    <span class="time">16:00</span>
-                    <div class="title-wrapper">
-                        <div class="title">下午茶：廣東路蔥油餅 & 老東方青草茶</div>
-                        <div class="map-btn-group">
-                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=台東廣東路蔥油餅" target="_blank">🗺️ 蔥油餅</a>
-                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=台東老東方青草茶" target="_blank">🗺️ 青草茶</a>
-                        </div>
-                    </div>
-                    <div class="desc">在前往鐵花村前，品嚐在地人激推的<span class="hl">廣東路蔥油餅</span>（現點現煎、蔥香四溢），並搭配一杯清涼退火的<span class="hl">老東方青草茶</span>，是跑景點間絕佳的能量補給。</div>
-                </div>
-                <div class="item">
-                    <span class="time">17:30</span>
-                    <div class="title-wrapper">
-                        <div class="title">鐵道藝術村</div>
-                        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=台東鐵道藝術村" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="desc">開車約 5 分鐘即可抵達。<span class="hl">必看</span>：鐵花村熱氣球燈海、TTstyle波浪屋獨特建築造型。</div>
-                </div>
-                <div class="item">
-                    <span class="time">19:00</span>
-                    <div class="title-wrapper">
-                        <div class="title">晚餐：來點感性滷味</div>
-                        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=來點感性滷味" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="desc">【餐廳替換】這家是台東超人氣的復古文青風熱滷味，<span class="hl">必吃</span>：各式新鮮滷味夾料、特製辣椒醬，非常適合一家人輕鬆分享的溫馨晚餐。</div>
-                    <div class="rec-box">
-                        <span class="rec-title">🔥 社群高討論熱門備案（周邊2km）：</span>
-                        <div class="rec-item">
-                            <span class="rec-name">1. 鄰家蒸餃 (原主行程，皮薄鮮肉多)</span>
-                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=鄰家蒸餃" target="_blank">🗺️ 導航</a>
-                        </div>
-                        <div class="rec-item">
-                            <span class="rec-name">2. 寶桑湯圓 (古早味脆圓與綿密紅豆湯)</span>
-                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=寶桑湯圓" target="_blank">🗺️ 導航</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <span class="time">20:30</span>
-                    <div class="title-wrapper">
-                        <div class="title">返回飯店休息</div>
-                    </div>
-                    <div class="desc">開車約 12 分鐘，返回 <span class="hl">娜路灣花園酒店</span> 入住歇息。</div>
-                </div>
-            </div>
-        </div>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-tag">🌿 在地 20 年私藏行程</div>
+    <h1>台東五天四夜<br>親子慢活自駕攻略</h1>
+    <p class="hero-sub">國小畢業旅遊・2026年6月13日～17日<br>火車抵台東・直航租車自由行・帶 13 歲小孩</p>
+    <div class="hero-chips">
+      <span class="chip">🚂 11:10 抵達 / 13:00 離開</span>
+      <span class="chip">🚗 直航租車 11:30 取車</span>
+      <span class="chip">🏨 D1 那路彎・D2–5 淘趣漫旅</span>
     </div>
-
-    <div id="d2" class="day-section">
-        <div class="day-header">
-            <span>Day 2：牧場與茶文化的清涼體驗</span>
-            <span class="day-badge">縱谷線南段</span>
-        </div>
-        <div class="day-body">
-            <div class="route-desc">🚙 沿途景觀：台9線縱谷段，兩側是連綿的中央山脈與海岸山脈，滿目翠綠茶園。</div>
-            <div class="timeline">
-                <div class="item">
-                    <span class="time">08:00</span>
-                    <div class="title-wrapper">
-                        <div class="title">早餐與退房</div>
-                    </div>
-                    <div class="desc">直接於 <span class="hl">娜路灣花園酒店</span> 內享用精緻早餐。用完早餐後辦理退房，準備展開縱谷行程。</div>
-                </div>
-                <div class="item">
-                    <span class="time">09:30</span>
-                    <div class="title-wrapper">
-                        <div class="title">初鹿牧場</div>
-                        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=初鹿牧場" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="desc">沿台9線北上，車程約 25 分鐘。<span class="hl">必看</span>：滾草區的放牧牛群。<span class="hl">必吃</span>：鮮奶饅頭、鮮奶冰淇淋。</div>
-                </div>
-                <div class="item">
-                    <span class="time">12:00</span>
-                    <div class="title-wrapper">
-                        <div class="title">午餐：原生應用植物園</div>
-                        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=台東原生應用植物園" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="desc">就在初鹿牧場隔壁（車程僅 2 分鐘）。<span class="hl">必吃</span>：特色野菜鍋（推紅甜菜、飛機菜）。<span class="hl">必買</span>：白鶴靈芝茶。</div>
-                    <div class="rec-box">
-                        <span class="rec-title">🔥 社群高討論熱門備案（周邊2km）：</span>
-                        <div class="rec-item">
-                            <span class="rec-name">1. 初鹿牧場景觀餐廳 (濃郁鮮奶鍋與火鍋套餐)</span>
-                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=初鹿牧場景觀餐廳" target="_blank">🗺️ 導航</a>
-                        </div>
-                        <div class="rec-item">
-                            <span class="rec-name">2. 斑鳩冰品 (在地特色釋迦、紅烏龍冰淇淋)</span>
-                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=斑鳩冰品" target="_blank">🗺️ 導航</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <span class="time">14:30</span>
-                    <div class="title-wrapper">
-                        <div class="title">新元昌紅茶產業文化館</div>
-                        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=新元昌紅茶產業文化館" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="desc">從植物園北上往鹿野方向，車程約 15 分鐘。<span class="hl">必看</span>：台東第一家民營紅茶廠的製茶文物與巨型揉茶機。<span class="hl">必喝</span>：在地特產紅烏龍茶與特色茶點。</div>
-                </div>
-                <div class="item">
-                    <span class="time">18:00</span>
-                    <div class="title-wrapper">
-                        <div class="title">晚餐：披薩阿伯 (Uncle Pete's Pizza)</div>
-                        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=披薩阿伯+Uncle+Pete's+Pizza" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="desc">由鹿野南下返回台東市區，車程約 30 分鐘。<span class="hl">必吃</span>：純手工美式現烤薄脆披薩、老闆特製辣油（互動感十足的社群超夯打卡名店）。</div>
-                    <div class="rec-box">
-                        <span class="rec-title">🔥 社群高討論熱門備案（周邊2km）：</span>
-                        <div class="rec-item">
-                            <span class="rec-name">1. 溫度小館 (精緻溫馨的義大利麵與燉飯料理)</span>
-                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=溫度小館+台東" target="_blank">🗺️ 導航</a>
-                        </div>
-                        <div class="rec-item">
-                            <span class="rec-name">2. 叮哥茶飲 旗艦店 (台東必喝洛神花茶與紅烏龍拿鐵)</span>
-                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=叮哥茶飲+旗艦店" target="_blank">🗺️ 導航</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <span class="time">20:00</span>
-                    <div class="title-wrapper">
-                        <div class="title">入住陶趣漫旅飯店</div>
-                        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=凱撒趣淘漫旅-台東" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="desc">開車約 10 分鐘，前往台東火車站旁的 <span class="hl">陶趣漫旅飯店</span> 辦理 check-in 入住，此飯店將續住至旅程結束。</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="d3" class="day-section">
-        <div class="day-header">
-            <span>Day 3：金黃稻浪與火車便當巡禮</span>
-            <span class="day-badge">池上深度遊</span>
-        </div>
-        <div class="day-body">
-            <div class="route-desc">🚙 沿途景觀：池上稻米之鄉，收割前可見一望無際的金黃稻浪與無電線桿純淨地景。</div>
-            <div class="timeline">
-                <div class="item">
-                    <span class="time">08:00</span>
-                    <div class="title-wrapper">
-                        <div class="title">出發前往池上</div>
-                    </div>
-                    <div class="desc">從火車站飯店開車出發，沿台9線一路縱谷北上（車程約 50 分鐘）。</div>
-                </div>
-                <div class="item">
-                    <span class="time">08:50</span>
-                    <div class="title-wrapper">
-                        <div class="title">特色早點：大池豆皮店</div>
-                        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=大池豆皮店" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="desc"><span class="hl">必吃</span>：每日現做表皮焦香酥脆的柴燒炸豆包、古早味香濃豆花。</div>
-                    <div class="rec-box">
-                        <span class="rec-title">🔥 社群高討論熱門備案（周邊2km）：</span>
-                        <div class="rec-item">
-                            <span class="rec-name">1. 福原豆腐店 (爆漿外酥內嫩的炸豆腐與豆花)</span>
-                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=福原豆腐店" target="_blank">🗺️ 導航</a>
-                        </div>
-                        <div class="rec-item">
-                            <span class="rec-name">2. 池上古早味豆花 (純手工傳統黑糖豆花)</span>
-                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=福原豆腐店" target="_blank">🗺️ 導航</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <span class="time">09:30</span>
-                    <div class="title-wrapper">
-                        <div class="title">伯朗大道 & 天堂路</div>
-                        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=池上伯朗大道" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="desc">建議在入口附近租借「電動輔助自行車」暢遊。<span class="hl">必看</span>：金城武樹、S型的天堂路絕景。</div>
-                </div>
-                <div class="item">
-                    <span class="time">12:00</span>
-                    <div class="title-wrapper">
-                        <div class="title">午餐：池上飯包文化故事館</div>
-                        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=悟饕池上飯包文化故事館" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="desc"><span class="hl">必吃</span>：經典傳統木片盒池上便當。<span class="hl">必看</span>：二樓早期復古農耕具展示區。</div>
-                    <div class="rec-box">
-                        <span class="rec-title">🔥 社群高討論熱門備案（周邊2km）：</span>
-                        <div class="rec-item">
-                            <span class="rec-name">1. 吉本肉圓 (在地人激推Q彈紅糟肉圓與四神湯)</span>
-                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=吉本肉圓" target="_blank">🗺️ 導航</a>
-                        </div>
-                        <div class="rec-item">
-                            <span class="rec-name">2. 甘盛堂 (文青老屋風的手工天然蔬果牛肉麵)</span>
-                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=甘盛堂" target="_blank">🗺️ 導航</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <span class="time">14:00</span>
-                    <div class="title-wrapper">
-                        <div class="title">池上豆之間</div>
-                        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=池上豆之間" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="desc">位於池上鄉間的大型豆製所。<span class="hl">必吃</span>：極致厚豆花、特製豆湯麵、豆包。</div>
-                </div>
-                <div class="item">
-                    <span class="time">16:00</span>
-                    <div class="title-wrapper">
-                        <div class="title">關山米國學校</div>
-                        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=米國學校" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="desc">南下回程方向車程約 15 分鐘。<span class="hl">必看</span>：繽紛彩繪外牆、碾米展示。<span class="hl">必買</span>：關山米乖乖。</div>
-                </div>
-                <div class="item">
-                    <span class="time">18:30</span>
-                    <div class="title-wrapper">
-                        <div class="title">晚餐：鹿嘉農莊</div>
-                        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=鹿嘉農莊" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="desc">往鹿野方向車程約 20 分鐘。<span class="hl">必吃</span>：職人研發特製的茶香特色無菜單在地料理。</div>
-                    <div class="rec-box">
-                        <span class="rec-title">🔥 社群高討論熱門備案（周邊2km）：</span>
-                        <div class="rec-item">
-                            <span class="rec-name">1. 鹿野高台老王咖啡 (賞景絕佳、特調紅烏龍茶點)</span>
-                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=鹿嘉農莊" target="_blank">🗺️ 導航</a>
-                        </div>
-                        <div class="rec-item">
-                            <span class="rec-name">2. 田媽媽傅姐風味餐 (古法柴燒桶仔雞與客家風味菜)</span>
-                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=田媽媽傅姐風味餐" target="_blank">🗺️ 導航</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <span class="time">20:00</span>
-                    <div class="title-wrapper">
-                        <div class="title">返回飯店</div>
-                    </div>
-                    <div class="desc">開車返回火車站旁的 <span class="hl">陶趣漫旅飯店</span> 休息。</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="d4" class="day-section">
-        <div class="day-header">
-            <span>Day 4：南洋風情與史前文明探險</span>
-            <span class="day-badge">海線台11線</span>
-        </div>
-        <div class="day-body">
-            <div class="route-desc">🚙 沿途景觀：沿台11線海岸線行駛，左山右海，太平洋波瀾壯闊與破碎珊瑚礁石。</div>
-            <div class="timeline">
-                <div class="item">
-                    <span class="time">08:30</span>
-                    <div class="title-wrapper">
-                        <div class="title">早餐：中華早點</div>
-                        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=台東中華早點" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="desc">開車前往市區。<span class="hl">必吃</span>：極具台東特色的滷肉飯加蛋、現打酥皮蛋餅。</div>
-                    <div class="rec-box">
-                        <span class="rec-title">🔥 社群高討論熱門備案（周邊2km）：</span>
-                        <div class="rec-item">
-                            <span class="rec-name">1. 明奎早餐店 (爆紅排隊必吃煉乳法式吐司與桂圓粥)</span>
-                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=明奎早餐店" target="_blank">🗺️ 導航</a>
-                        </div>
-                        <div class="rec-item">
-                            <span class="rec-name">2. 簡單鴨肉飯 (在地人超愛、肉質超嫩的早間鴨肉飯)</span>
-                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=台東中華早點" target="_blank">🗺️ 導航</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <span class="time">10:00</span>
-                    <div class="title-wrapper">
-                        <div class="title">富山護漁步道</div>
-                        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=富山護漁區" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="desc">轉台11線北上車程約 20 分鐘。<span class="hl">必看</span>：清澈見底海水、潮間帶螃蟹與豐富魚群。</div>
-                </div>
-                <div class="item">
-                    <span class="time">12:00</span>
-                    <div class="title-wrapper">
-                        <div class="title">午餐：可可娜咖啡館</div>
-                        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=可可娜咖啡" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="desc">緊鄰護漁步道步行可達。<span class="hl">必看</span>：高大椰子樹與茅草屋蔚藍海景。<span class="hl">必吃</span>：南洋點心、沁涼椰子水。</div>
-                    <div class="rec-box">
-                        <span class="rec-title">🔥 社群高討論熱門備案（周邊2km）：</span>
-                        <div class="rec-item">
-                            <span class="rec-name">1. 小魚兒的家 (IG熱門、海景第一排親子景觀餐廳)</span>
-                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=小魚兒的家" target="_blank">🗺️ 導航</a>
-                        </div>
-                        <div class="rec-item">
-                            <span class="rec-name">2. 逐浪咖啡 (極受歡迎的網美露天看海咖啡廳)</span>
-                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=可可娜咖啡" target="_blank">🗺️ 導航</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <span class="time">14:30</span>
-                    <div class="title-wrapper">
-                        <div class="title">國立臺灣史前文化博物館</div>
-                        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=國立臺灣史前文化博物館" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="desc">開車返回市區西側約 25 分鐘。<span class="hl">必看</span>：太陽廣場巨型石柱、沈浸式史前劇場。</div>
-                </div>
-                <div class="item">
-                    <span class="time">17:30</span>
-                    <div class="title-wrapper">
-                        <div class="title">飯店短暫梳洗休息</div>
-                    </div>
-                    <div class="desc">離火車站極近（車程僅 8 分鐘），先回 <span class="hl">陶趣漫旅飯店</span> 吹冷氣梳洗放鬆。</div>
-                </div>
-                <div class="item">
-                    <span class="time">18:30</span>
-                    <div class="title-wrapper">
-                        <div class="title">晚餐：米巴奈山地美食坊</div>
-                        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=米巴奈山地美食坊" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="desc">從飯店開車約 12 分鐘。<span class="hl">必吃</span>：特色糯米飯、烤春筍，精緻原民食材。</div>
-                    <div class="rec-box">
-                        <span class="rec-title">🔥 社群高討論熱門備案（周邊2km）：</span>
-                        <div class="rec-item">
-                            <span class="rec-name">1. 原始部落風味餐廳 (山頂俯瞰台東夜景、現烤原民烤雞)</span>
-                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=原始部落風味餐廳" target="_blank">🗺️ 導航</a>
-                        </div>
-                        <div class="rec-item">
-                            <span class="rec-name">2. 響羅雷原住民音樂餐廳 (在地高評價傳統原民熱炒樂)</span>
-                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=米巴奈山地美食坊" target="_blank">🗺️ 導航</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <span class="time">20:30</span>
-                    <div class="title-wrapper">
-                        <div class="title">返回飯店</div>
-                    </div>
-                    <div class="desc">開車返回 <span class="hl">陶趣漫旅飯店</span> 休息。</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="d5" class="day-section">
-        <div class="day-header">
-            <span>Day 5：森林單車與返家之路</span>
-            <span class="day-badge">市區伴手禮</span>
-        </div>
-        <div class="day-body">
-            <div class="route-desc">🚙 沿途景觀：位於出海口的森林公園，擁有無邊際林道與平緩如鏡的湖泊仙境。</div>
-            <div class="timeline">
-                <div class="item">
-                    <span class="time">07:30</span>
-                    <div class="title-wrapper">
-                        <div class="title">早餐：曙光森林</div>
-                        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=曙光森林" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="desc">開車至市區。<span class="hl">必吃</span>：滿溢木香與植物綠意空間中享用特色手工窯烤麵包。</div>
-                    <div class="rec-box">
-                        <span class="rec-title">🔥 社群高討論熱門備案（周邊2km）：</span>
-                        <div class="rec-item">
-                            <span class="rec-name">1. 換個魚肚白 (深受文青與IG喜愛的三明治早午餐)</span>
-                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=曙光森林" target="_blank">🗺️ 導航</a>
-                        </div>
-                        <div class="rec-item">
-                            <span class="rec-name">2. 世紀全開早餐 (在地人大推的手工粉漿蛋餅)</span>
-                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=曙光森林" target="_blank">🗺️ 導航</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <span class="time">08:30</span>
-                    <div class="title-wrapper">
-                        <div class="title">台東森林公園</div>
-                        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=台東森林公園" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="desc">開車約 5 分鐘。<span class="hl">必看</span>：絕美倒影的琵琶湖、平靜寬廣的活水湖。</div>
-                </div>
-                <div class="item">
-                    <span class="time">10:30</span>
-                    <div class="title-wrapper">
-                        <div class="title">伴手禮：台東市農會（山海經選物）</div>
-                        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=台東市農會" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="desc">開車約 10 分鐘。<span class="hl">必買</span>：在地特產洛神花乾、夏威夷豆塔、台東紅藜。</div>
-                </div>
-                <div class="item">
-                    <span class="time">11:30</span>
-                    <div class="title-wrapper">
-                        <div class="title">午餐：葉氏海鮮</div>
-                        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=台東葉氏海鮮" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="desc">【餐廳替換】取代原本的藍蜻蜓。台東市區極具盛名的海產專賣店，<span class="hl">必吃</span>：高CP值厚切生魚片、鮮甜白蝦與干貝，用澎湃的頂級海味為這趟旅程畫下完美句點！</div>
-                    <div class="rec-box">
-                        <span class="rec-title">🔥 社群高討論熱門備案（周邊2km）：</span>
-                        <div class="rec-item">
-                            <span class="rec-name">1. 藍蜻蜓速食專賣店 (原主行程，經典台式炸雞)</span>
-                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=藍蜻蜓速食專賣店" target="_blank">🗺️ 導航</a>
-                        </div>
-                        <div class="rec-item">
-                            <span class="rec-name">2. 林家臭豆腐 (排隊外酥內嫩韭菜臭豆腐)</span>
-                            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=林家臭豆腐" target="_blank">🗺️ 導航</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <span class="time">12:45</span>
-                    <div class="title-wrapper">
-                        <div class="title">還車與返家</div>
-                        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=直航租車x台東站前店" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="desc">開車前往火車站周邊加油站將油箱加滿，回到火車站旁 <span class="hl">直航租車（台東站）</span> 辦理還車，準時於 13:00 至台東火車站乘車返家。</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="summary" class="summary-section">
-        <h2>🗺️ 美食口碑與地圖導航總彙整</h2>
-        <p style="font-size: 0.8rem; color: #64748b; margin-bottom: 10px;">包含所有行程主餐廳與社群推薦備案之精選菜單與一鍵導航點：</p>
-        
-        <div class="res-card">
-            <div class="res-header"><span class="res-name">正海城北方小館</span><span class="res-tag main-eat">D1 午餐</span></div>
-            <div class="res-dish">💡 推薦餐點：千層餅、酸菜白肉鍋、豬肉捲餅</div>
-            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=正海城北方小館" target="_blank">📍 地圖定位</a>
-        </div>
-
-        <div class="res-card">
-            <div class="res-header"><span class="res-name">廣東路蔥油餅</span><span class="res-tag main-eat">D1 下午茶</span></div>
-            <div class="res-dish">💡 推薦餐點：現點現煎爆香蔥油餅</div>
-            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=台東廣東路蔥油餅" target="_blank">📍 地圖定位</a>
-        </div>
-
-        <div class="res-card">
-            <div class="res-header"><span class="res-name">老東方青草茶</span><span class="res-tag main-eat">D1 下午茶</span></div>
-            <div class="res-dish">💡 推薦餐點：清涼解渴降火氣青草茶</div>
-            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=台東老東方青草茶" target="_blank">📍 地圖定位</a>
-        </div>
-
-        <div class="res-card">
-            <div class="res-header"><span class="res-name">來點感性滷味</span><span class="res-tag main-eat">D1 晚餐</span></div>
-            <div class="res-dish">💡 推薦餐點：各式新鮮熱滷味、獨門特製辣椒醬</div>
-            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=來點感性滷味" target="_blank">📍 地圖定位</a>
-        </div>
-
-        <div class="res-card">
-            <div class="res-header"><span class="res-name">原生應用植物園野菜鍋</span><span class="res-tag main-eat">D2 午餐</span></div>
-            <div class="res-dish">💡 推薦餐點：養生藥草無限飽足汆燙鍋、紅甜菜、飛機菜</div>
-            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=台東原生應用植物園" target="_blank">📍 地圖定位</a>
-        </div>
-
-        <div class="res-card">
-            <div class="res-header"><span class="res-name">披薩阿伯 (Uncle Pete's Pizza)</span><span class="res-tag main-eat">D2 晚餐</span></div>
-            <div class="res-dish">💡 推薦餐點：手工現烤美式薄脆披薩、自製辣油、新鮮沙拉</div>
-            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=披薩阿伯+Uncle+Pete's+Pizza" target="_blank">📍 地圖定位</a>
-        </div>
-
-        <div class="res-card">
-            <div class="res-header"><span class="res-name">大池豆皮店</span><span class="res-tag main-eat">D3 早餐</span></div>
-            <div class="res-dish">💡 推薦餐點：香脆柴燒炸豆包、古早味豆花、純濃豆漿</div>
-            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=大池豆皮店" target="_blank">📍 地圖定位</a>
-        </div>
-
-        <div class="res-card">
-            <div class="res-header"><span class="res-name">池上飯包文化故事館</span><span class="res-tag main-eat">D3 午餐</span></div>
-            <div class="res-dish">💡 推薦餐點：正宗經典木片鐵路盒便當、炸雞腿便當</div>
-            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=悟饕池上飯包文化故事館" target="_blank">📍 地圖定位</a>
-        </div>
-
-        <div class="res-card">
-            <div class="res-header"><span class="res-name">池上豆之間</span><span class="res-tag main-eat">D3 下午茶</span></div>
-            <div class="res-dish">💡 推薦餐點：精品厚豆花、豆湯麵、香煎豆包</div>
-            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=池上豆之間" target="_blank">📍 地圖定位</a>
-        </div>
-
-        <div class="res-card">
-            <div class="res-header"><span class="res-name">鹿嘉農莊</span><span class="res-tag main-eat">D3 晚餐</span></div>
-            <div class="res-dish">💡 推薦餐點：職人無菜單茶香特色料理、私房在地小菜</div>
-            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=鹿嘉農莊" target="_blank">📍 地圖定位</a>
-        </div>
-
-        <div class="res-card">
-            <div class="res-header"><span class="res-name">中華早點</span><span class="res-tag main-eat">D4 早餐</span></div>
-            <div class="res-dish">💡 推薦餐點：古早味滷肉飯加蛋、現做酥皮蛋餅</div>
-            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=台東中華早點" target="_blank">📍 地圖定位</a>
-        </div>
-
-        <div class="res-card">
-            <div class="res-header"><span class="res-name">可可娜咖啡館</span><span class="res-tag main-eat">D4 午餐</span></div>
-            <div class="res-dish">💡 推薦餐點：南洋風味打拋豬飯、水果茶、沁涼現剖椰子水</div>
-            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=可可娜咖啡" target="_blank">📍 地圖定位</a>
-        </div>
-
-        <div class="res-card">
-            <div class="res-header"><span class="res-name">米巴奈山地美食坊</span><span class="res-tag main-eat">D4 晚餐</span></div>
-            <div class="res-dish">💡 推薦餐點：招牌山地糯米飯、現烤脆口春筍、原民風味烤豬肉</div>
-            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=米巴奈山地美食坊" target="_blank">📍 地圖定位</a>
-        </div>
-
-        <div class="res-card">
-            <div class="res-header"><span class="res-name">曙光森林</span><span class="res-tag main-eat">D5 早餐</span></div>
-            <div class="res-dish">💡 推薦餐點：手工窯烤麵包拼盤、紅烏龍茶飲</div>
-            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=曙光森林" target="_blank">📍 地圖定位</a>
-        </div>
-
-        <div class="res-card">
-            <div class="res-header"><span class="res-name">葉氏海鮮</span><span class="res-tag main-eat">D5 午餐</span></div>
-            <div class="res-dish">💡 推薦餐點：高CP值厚切生魚片、干貝、新鮮白蝦</div>
-            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=台東葉氏海鮮" target="_blank">📍 地圖定位</a>
-        </div>
-
-        <div class="res-card" style="background: #fffbfa; padding: 12px; border-radius: 10px; margin-top: 20px; border: 1px dashed #fdba74;">
-            <p style="font-weight: bold; font-size: 0.9rem; color: #c2410c; margin-bottom: 8px;">🔥 社群熱門備案推薦地圖定位（一鍵導航）：</p>
-            <p style="font-size: 0.82rem; line-height: 2;">
-                • <a href="https://www.google.com/maps/search/?api=1&query=阿鋐炸雞+正氣店" target="_blank" style="color: #1a73e8; text-decoration: none; font-weight: bold;">阿鋐炸雞 正氣店 (點我導航)</a> <span style="color: #64748b;">[必吃台式炸雞]</span><br>
-                • <a href="https://www.google.com/maps/search/?api=1&query=榕樹下米苔目" target="_blank" style="color: #1a73e8; text-decoration: none; font-weight: bold;">榕樹下米苔目 (點我導航)</a> <span style="color: #64748b;">[在地傳統米苔目]</span><br>
-                • <a href="https://www.google.com/maps/search/?api=1&query=寶桑湯圓" target="_blank" style="color: #1a73e8; text-decoration: none; font-weight: bold;">寶桑湯圓 (點我導航)</a> <span style="color: #64748b;">[脆圓古早味甜品]</span><br>
-                • <a href="https://www.google.com/maps/search/?api=1&query=鄰家蒸餃" target="_blank" style="color: #1a73e8; text-decoration: none; font-weight: bold;">鄰家蒸餃 (點我導航)</a> <span style="color: #64748b;">[皮薄多汁鮮肉蒸餃]</span><br>
-                • <a href="https://www.google.com/maps/search/?api=1&query=初鹿牧場景觀餐廳" target="_blank" style="color: #1a73e8; text-decoration: none; font-weight: bold;">初鹿牧場景觀餐廳 (點我導航)</a> <span style="color: #64748b;">[濃郁原味鮮奶鍋]</span><br>
-                • <a href="https://www.google.com/maps/search/?api=1&query=斑鳩冰品" target="_blank" style="color: #1a73e8; text-decoration: none; font-weight: bold;">斑鳩冰品 (點我導航)</a> <span style="color: #64748b;">[釋迦與紅茶冰品]</span><br>
-                • <a href="https://www.google.com/maps/search/?api=1&query=溫度小館+台東" target="_blank" style="color: #1a73e8; text-decoration: none; font-weight: bold;">溫度小館 (點我導航)</a> <span style="color: #64748b;">[溫馨義大利麵/燉飯]</span><br>
-                • <a href="https://www.google.com/maps/search/?api=1&query=叮哥茶飲+旗艦店" target="_blank" style="color: #1a73e8; text-decoration: none; font-weight: bold;">叮哥茶飲 旗艦店 (點我導航)</a> <span style="color: #64748b;">[必喝台東紅烏龍]</span><br>
-                • <a href="https://www.google.com/maps/search/?api=1&query=福原豆腐店" target="_blank" style="color: #1a73e8; text-decoration: none; font-weight: bold;">福原豆腐店 (點我導航)</a> <span style="color: #64748b;">[爆漿外酥炸豆腐]</span><br>
-                • <a href="https://www.google.com/maps/search/?api=1&query=吉本肉圓" target="_blank" style="color: #1a73e8; text-decoration: none; font-weight: bold;">吉本肉圓 (點我導航)</a> <span style="color: #64748b;">[Q彈紅糟古早肉圓]</span><br>
-                • <a href="https://www.google.com/maps/search/?api=1&query=甘盛堂" target="_blank" style="color: #1a73e8; text-decoration: none; font-weight: bold;">甘盛堂 (點我導航)</a> <span style="color: #64748b;">[手工蔬果牛肉麵]</span><br>
-                • <a href="https://www.google.com/maps/search/?api=1&query=田媽媽傅姐風味餐" target="_blank" style="color: #1a73e8; text-decoration: none; font-weight: bold;">田媽媽傅姐風味餐 (點我導航)</a> <span style="color: #64748b;">[古法柴燒桶仔雞]</span><br>
-                • <a href="https://www.google.com/maps/search/?api=1&query=明奎早餐店" target="_blank" style="color: #1a73e8; text-decoration: none; font-weight: bold;">明奎早餐店 (點我導航)</a> <span style="color: #64748b;">[煉乳法式吐司招牌]</span><br>
-                • <a href="https://www.google.com/maps/search/?api=1&query=小魚兒的家" target="_blank" style="color: #1a73e8; text-decoration: none; font-weight: bold;">小魚兒的家 (點我導航)</a> <span style="color: #64748b;">[海景第一排親子餐廳]</span><br>
-                • <a href="https://www.google.com/maps/search/?api=1&query=原始部落風味餐廳" target="_blank" style="color: #1a73e8; text-decoration: none; font-weight: bold;">原始部落餐廳 (點我導航)</a> <span style="color: #64748b;">[山頂烤雞俯瞰夜景]</span><br>
-                • <a href="https://www.google.com/maps/search/?api=1&query=林家臭豆腐" target="_blank" style="color: #1a73e8; text-decoration: none; font-weight: bold;">林家臭豆腐 (點我導航)</a> <span style="color: #64748b;">[外酥內嫩小塊臭豆腐]</span><br>
-                • <a href="https://www.google.com/maps/search/?api=1&query=藍蜻蜓速食專賣店" target="_blank" style="color: #1a73e8; text-decoration: none; font-weight: bold;">藍蜻蜓速食專賣店 (點我導航)</a> <span style="color: #64748b;">[經典台式炸雞霸主]</span>
-            </p>
-        </div>
-
-        <div class="res-card" style="background: #f0fdf4; padding: 12px; border-radius: 10px; margin-top: 20px; border: 1px solid #bbf7d0;">
-            <p style="font-weight: bold; font-size: 0.9rem; color: #166534; margin-bottom: 8px;">⭐ 您的專屬地圖清單評估 (同步匯入)：</p>
-            <p style="font-size: 0.82rem; line-height: 2;">
-                • <a href="https://www.google.com/maps/search/?api=1&query=黃記蔥油餅" target="_blank" style="color: #1a73e8; text-decoration: none; font-weight: bold;">黃記蔥油餅 (點我導航)</a> <span style="color: #64748b;">[九層塔香氣滿溢的排隊點心]</span><br>
-                • <a href="https://www.google.com/maps/search/?api=1&query=卑南豬血湯" target="_blank" style="color: #1a73e8; text-decoration: none; font-weight: bold;">卑南豬血湯 (點我導航)</a> <span style="color: #64748b;">[在地經典，料多大塊的台東滋味]</span><br>
-                • <a href="https://www.google.com/maps/search/?api=1&query=客來吃樂" target="_blank" style="color: #1a73e8; text-decoration: none; font-weight: bold;">客來吃樂 (點我導航)</a> <span style="color: #64748b;">[大腸蚵仔麵線與消暑解渴的綠豆算]</span><br>
-                • <a href="https://www.google.com/maps/search/?api=1&query=星星部落景觀咖啡" target="_blank" style="color: #1a73e8; text-decoration: none; font-weight: bold;">星星部落景觀咖啡 (點我導航)</a> <span style="color: #64748b;">[賞台東夜景的絕佳去處]</span>
-            </p>
-        </div>
-    </div>
-
+  </div>
 </div>
 
-<nav class="bottom-nav">
-    <a href="#d1" class="nav-item"><span>❶</span>D1</a>
-    <a href="#d2" class="nav-item"><span>❷</span>D2</a>
-    <a href="#d3" class="nav-item"><span>❸</span>D3</a>
-    <a href="#d4" class="nav-item"><span>❹</span>D4</a>
-    <a href="#d5" class="nav-item"><span>❺</span>D5</a>
-    <a href="#summary" class="nav-item" style="color: var(--secondary);"><span>🗺️</span>總彙整</a>
+<!-- LOGISTICS -->
+<div class="wrap">
+  <div class="logi-grid">
+    <div class="logi-card">
+      <h4>🚗 租車</h4>
+      <p><a href="https://www.google.com/maps/search/?api=1&query=%E7%9B%B4%E8%88%AA%E7%A7%9F%E8%BB%8Ax%E5%8F%B0%E6%9D%B1%E7%AB%99%E5%89%8D%E5%BA%97&query_place_id=ChIJkd3HLi26bzQRUfEq2WChEqE" target="_blank">直航租車 台東站前店</a></p>
+      <div class="logi-sub">取車 6/13 11:30<br>還車 6/17 12:30<br>⭐ 4.7（894則）☎ 089-222-224</div>
+    </div>
+    <div class="logi-card">
+      <h4>🏨 D1 住宿</h4>
+      <p><a href="https://www.google.com/maps/search/?api=1&query=%E5%A8%9C%E8%B7%AF%E5%BD%8E%E8%8A%B1%E5%9C%92%E9%85%92%E5%BA%97&query_place_id=ChIJLespYtK7bzQRMa5bKHM8DFI" target="_blank">那路彎花園酒店</a></p>
+      <div class="logi-sub">含隔日早餐<br>⭐ 4.1（2987則）☎ 089-231-111</div>
+    </div>
+    <div class="logi-card">
+      <h4>🏨 D2–D5 住宿</h4>
+      <p><a href="https://www.google.com/maps/search/?api=1&query=%E5%87%B1%E6%92%92%E8%B6%A3%E6%B7%98%E6%BC%AB%E6%97%85-%E5%8F%B0%E6%9D%B1&query_place_id=ChIJ4yJAGs67bzQRIyWYAdiHZAE" target="_blank">淘趣漫旅（凱撒趣）台東</a></p>
+      <div class="logi-sub">無早餐，步行至火車站 3 分鐘<br>⭐ 4.5（3210則）☎ 089-231-188</div>
+    </div>
+    <div class="logi-card">
+      <h4>ℹ️ 停車提醒</h4>
+      <p style="font-size:12.5px;font-weight:400;line-height:1.5">池上、關山市區免費<br>台東市建議路邊計費<br>森林公園收費 NT$80</p>
+    </div>
+  </div>
+
+  <div class="notice">
+    <h4>📋 出發前確認清單</h4>
+    <ul class="notice-list">
+      <li>鐵花村週三–週日 17:00–22:00，D1（週六）完美符合 ✓</li>
+      <li>史前博物館週一休，已安排在 D4（週二）✓</li>
+      <li>大池豆皮店週三休，D3（週一）正常營業 ✓</li>
+      <li>武陵咖啡廳週一–六 09:00–16:00，D3（週一）可前往 ✓</li>
+      <li class="warn">武陵咖啡廳烤全雞需提前 70 分鐘預訂，請於 11:00 前致電！☎ 089-581-014#308</li>
+      <li class="warn">正海城北方小館午餐僅到 13:30，請 12:30 前入座</li>
+      <li>6 月熱氣球嘉年華約 6/28 開幕，此行鹿野高台可賞景但未必有熱氣球</li>
+      <li>6 月午後雷陣雨頻繁，建議備折疊傘或薄雨衣</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===== DAY 1 ===== -->
+<div class="day-section" id="day1">
+  <div class="wrap">
+    <div class="day-hdr">
+      <div class="day-badge"><div class="day-num">D1</div><div class="day-lbl">6/13 週六</div></div>
+      <div class="day-info">
+        <h2>抵達市區・鐵道文化微光</h2>
+        <div class="day-meta">台東市區 ｜ 住宿：那路彎花園酒店</div>
+        <div class="route-tip">🚙 出站即見卑南大溪開闊景觀，讓孩子感受台東的第一印象</div>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-line"></div>
+
+      <div class="tl-item">
+        <div class="tl-time">11:10<div class="tl-dot"></div></div>
+        <div class="tl-card spot">
+          <div class="tl-card-hdr">
+            <div class="tl-title">抵達台東火車站<span class="badge b-spot">交通</span></div>
+            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=%E5%8F%B0%E6%9D%B1%E7%81%AB%E8%BB%8A%E7%AB%99" target="_blank">📍 導航</a>
+          </div>
+          <p class="tl-desc">下車後整理行李，往左步行約 10 分鐘即可抵達直航租車，也可搭計程車前往（車程 5 分鐘）。</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-time">11:30<div class="tl-dot"></div></div>
+        <div class="tl-card spot">
+          <div class="tl-card-hdr">
+            <div class="tl-title">直航租車取車<span class="badge b-spot">租車</span></div>
+            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=%E7%9B%B4%E8%88%AA%E7%A7%9F%E8%BB%8Ax%E5%8F%B0%E6%9D%B1%E7%AB%99%E5%89%8D%E5%BA%97&query_place_id=ChIJkd3HLi26bzQRUfEq2WChEqE" target="_blank">📍 導航</a>
+          </div>
+          <div class="star">⭐ 4.7（894則）｜ 全年無休 08:30–20:30</div>
+          <p class="tl-desc">台東最受自由行旅客好評的租車店，取車後先開車前往那路彎寄放行李，再輕裝出發遊市區。☎ 089-222-224</p>
+          <div class="tl-tip">取車後立刻加油！市區外加油站分散，出發前先把油箱加滿。</div>
+        </div>
+      </div>
+
+      <div class="drive"><span class="drive-tag">🚗 車程約 5 分鐘</span>→ 那路彎花園酒店</div>
+
+      <div class="tl-item">
+        <div class="tl-time">12:00<div class="tl-dot"></div></div>
+        <div class="tl-card hotel">
+          <div class="tl-card-hdr">
+            <div class="tl-title">那路彎花園酒店・寄放行李<span class="badge b-hotel">住宿</span></div>
+            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=%E5%A8%9C%E8%B7%AF%E5%BD%8E%E8%8A%B1%E5%9C%92%E9%85%92%E5%BA%97&query_place_id=ChIJLespYtK7bzQRMa5bKHM8DFI" target="_blank">📍 導航</a>
+          </div>
+          <p class="tl-desc">Check-in 通常 15:00，先寄放行李後輕裝出發市區。下午 15:00 回來正式入住。</p>
+        </div>
+      </div>
+
+      <div class="drive"><span class="drive-tag">🚗 車程約 10 分鐘</span>→ 市區</div>
+
+      <div class="tl-item">
+        <div class="tl-time">12:30<div class="tl-dot"></div></div>
+        <div class="tl-card meal">
+          <div class="tl-card-hdr">
+            <div class="tl-title">午餐・正海城北方小館<span class="badge b-meal">主餐</span></div>
+            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=%E6%AD%A3%E6%B5%B7%E5%9F%8E%E5%8C%97%E6%96%B9%E5%B0%8F%E9%A4%A8&query_place_id=ChIJJYrm1Gu5bzQRW2iEv42LyKM" target="_blank">📍 導航</a>
+          </div>
+          <div class="star">⭐ 4.0（1,034則）｜ 11:30–13:30 / 17:30–19:30</div>
+          <div class="food-must">
+            <div class="food-must-title">必吃推薦</div>
+            <div class="food-pills">
+              <span class="food-pill hot">千層餅</span>
+              <span class="food-pill hot">酸菜白肉鍋</span>
+              <span class="food-pill">豬肉捲餅</span>
+              <span class="food-pill">東北酸菜麵</span>
+            </div>
+          </div>
+          <p class="tl-desc">台東少見的北方麵食老店，麵團手工現桿，千層餅層次豐富，酸菜白肉鍋湯底清爽不油膩。剛到台東就吃到不同於台灣常見口味的料理，是個驚喜開場。</p>
+          <div class="tl-warn">午餐 13:30 打烊，請 12:30 前入座！晚餐場 17:30 開始。</div>
+          <div class="backup-wrap">
+            <div class="backup-lbl">☁ 備案選項</div>
+            <div class="backup-list">
+              <div class="bk-card">
+                <div class="bk-info">
+                  <div class="bk-name">榕樹下米苔目</div>
+                  <div class="bk-desc">⭐ 4.2（14,678則）台東最具代表性古早味，米苔目 55 元，CP 值超高｜10:00–14:30 / 16:30–19:30（週三休）</div>
+                </div>
+                <a class="bk-map" href="https://www.google.com/maps/search/?api=1&query=%E6%A6%95%E6%A8%B9%E4%B8%8B%E7%B1%B3%E8%8B%94%E7%9B%AE&query_place_id=ChIJjV1T8j65bzQRGwX2peQCmDs" target="_blank">📍</a>
+              </div>
+              <div class="bk-card">
+                <div class="bk-info">
+                  <div class="bk-name">阿鋐炸雞 正氣店</div>
+                  <div class="bk-desc">台東台式傳統炸雞，外酥爆汁，孩子必愛</div>
+                </div>
+                <a class="bk-map" href="https://www.google.com/maps/search/?api=1&query=%E9%98%BF%E9%8B%90%E7%82%B8%E9%9B%9E+%E6%AD%A3%E6%B0%A3%E5%BA%97" target="_blank">📍</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="drive"><span class="drive-tag">🚗 車程約 8 分鐘</span>→ 台東糖廠文創園區</div>
+
+      <div class="tl-item">
+        <div class="tl-time">14:30<div class="tl-dot"></div></div>
+        <div class="tl-card spot">
+          <div class="tl-card-hdr">
+            <div class="tl-title">台東糖廠文創園區<span class="badge b-spot">景點</span></div>
+            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=%E5%8F%B0%E6%9D%B1%E7%B3%96%E5%BB%A0%E6%96%87%E5%89%B5%E5%9C%92%E5%8D%80&query_place_id=ChIJwVUn5Z25bzQREpU-F-fcJKY" target="_blank">📍 導航</a>
+          </div>
+          <div class="star">⭐ 3.8（2,650則）｜ 全天開放免費入場</div>
+          <p class="tl-desc">老糖廠改建的文創空間，巨型機具化身裝置藝術，很適合孩子探索拍照。記得買一支糖廠傳統冰棒（約 25 元），煉乳口味和鳳梨口味是在地人的集體童年回憶。</p>
+          <div class="tl-tip">糖廠冰棒是必買！這個牌子只有台東才有，別忘了帶幾支回飯店冷凍。</div>
+        </div>
+      </div>
+
+      <div class="drive"><span class="drive-tag">🚗 車程約 5 分鐘</span>→ 廣東路</div>
+
+      <div class="tl-item">
+        <div class="tl-time">16:00<div class="tl-dot"></div></div>
+        <div class="tl-card snack">
+          <div class="tl-card-hdr">
+            <div class="tl-title">廣東路蔥油餅 + 老東方青草茶<span class="badge b-snack">點心</span></div>
+          </div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px">
+            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=%E5%8F%B0%E6%9D%B1%E5%BB%A3%E6%9D%B1%E8%B7%AF%E8%94%94%E6%B2%B9%E9%A4%85" target="_blank">📍 蔥油餅</a>
+            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=%E5%8F%B0%E6%9D%B1%E8%80%81%E6%9D%B1%E6%96%B9%E9%9D%92%E8%8D%89%E8%8C%B6" target="_blank">📍 青草茶</a>
+          </div>
+          <p class="tl-desc">去鐵花村前的能量補給。廣東路蔥油餅現煎蔥香四溢，搭一杯老東方青草茶退火解暑，是台東在地人的下午儀式感。</p>
+        </div>
+      </div>
+
+      <div class="drive"><span class="drive-tag">🚗 車程約 5 分鐘</span>→ 鐵花村</div>
+
+      <div class="tl-item">
+        <div class="tl-time">17:30<div class="tl-dot"></div></div>
+        <div class="tl-card spot">
+          <div class="tl-card-hdr">
+            <div class="tl-title">鐵花村音樂聚落<span class="badge b-spot">景點</span></div>
+            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=%E9%90%B5%E8%8A%B1%E6%9D%91%E9%9F%B3%E6%A8%82%E8%81%9A%E8%90%BD&query_place_id=ChIJAzKH2hW5bzQRD7rKWL4N5KU" target="_blank">📍 導航</a>
+          </div>
+          <div class="star">⭐ 4.5（14,504則）｜ 週三–週日 17:00–22:00</div>
+          <p class="tl-desc">廢棄鐵道改造的文藝聚落，舊月台化身音樂舞台，熱氣球燈海在夜幕下格外夢幻。週六通常有現場樂團演出，帶孩子感受台東的慢活夜晚氛圍，還可逛手作小市集。</p>
+          <div class="tl-tip">週六現場表演機率高，建議 17:30 前到，先逛市集再等晚間演出。</div>
+        </div>
+      </div>
+
+      <div class="drive"><span class="drive-tag">🚗 車程約 3 分鐘</span>→ 晚餐</div>
+
+      <div class="tl-item">
+        <div class="tl-time">19:00<div class="tl-dot"></div></div>
+        <div class="tl-card meal">
+          <div class="tl-card-hdr">
+            <div class="tl-title">晚餐・來點感性滷味<span class="badge b-meal">主餐</span></div>
+            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=%E4%BE%86%E9%BB%9E%E6%84%9F%E6%80%A7%E6%BB%B7%E5%91%B3&query_place_id=ChIJe7nkjj65bzQRRkXApzTpNcs" target="_blank">📍 導航</a>
+          </div>
+          <div class="star">⭐ 4.1（940則）｜ 16:00–凌晨 2:00（週一休）</div>
+          <div class="food-must">
+            <div class="food-must-title">必點</div>
+            <div class="food-pills">
+              <span class="food-pill hot">各式鮮滷食材</span>
+              <span class="food-pill hot">招牌辣椒醬</span>
+              <span class="food-pill">粉絲、豆腐</span>
+              <span class="food-pill">米血糕</span>
+            </div>
+          </div>
+          <p class="tl-desc">復古文青風格熱滷味店，一家人挑食材自由搭配，特別有趣！獨門辣椒醬是靈魂。價格實惠，輕鬆分享的溫馨晚餐。</p>
+          <div class="backup-wrap">
+            <div class="backup-lbl">☁ 備案選項</div>
+            <div class="backup-list">
+              <div class="bk-card">
+                <div class="bk-info">
+                  <div class="bk-name">鄰家蒸餃</div>
+                  <div class="bk-desc">皮薄鮮肉多，現蒸熱騰騰</div>
+                </div>
+                <a class="bk-map" href="https://www.google.com/maps/search/?api=1&query=%E9%84%B0%E5%AE%B6%E8%92%B8%E9%A4%83" target="_blank">📍</a>
+              </div>
+              <div class="bk-card">
+                <div class="bk-info">
+                  <div class="bk-name">寶桑湯圓</div>
+                  <div class="bk-desc">古早味脆圓與綿密紅豆湯，懷舊甜點</div>
+                </div>
+                <a class="bk-map" href="https://www.google.com/maps/search/?api=1&query=%E5%AF%B6%E6%A1%91%E6%B9%AF%E5%9C%93" target="_blank">📍</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="drive"><span class="drive-tag">🚗 車程約 12 分鐘</span>→ 那路彎花園酒店</div>
+
+      <div class="tl-item">
+        <div class="tl-time">20:30<div class="tl-dot"></div></div>
+        <div class="tl-card hotel">
+          <div class="tl-title">返回那路彎花園酒店休息<span class="badge b-hotel">住宿</span></div>
+          <p class="tl-desc">記得明早 08:00 準時享用飯店早餐，那路彎早餐含在住宿費內，千萬別睡過頭！</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- D1 美食日誌 -->
+    <div class="food-section">
+      <h3>🍽 D1 美食日誌</h3>
+      <div class="food-row">
+        <div class="food-type">午餐</div>
+        <div class="food-row-info">
+          <div class="food-row-name">正海城北方小館</div>
+          <div class="food-row-note">⭐ 4.0｜千層餅、酸菜白肉鍋｜⚠ 13:30 打烊</div>
+        </div>
+        <a class="food-row-map" href="https://www.google.com/maps/search/?api=1&query=%E6%AD%A3%E6%B5%B7%E5%9F%8E%E5%8C%97%E6%96%B9%E5%B0%8F%E9%A4%A8&query_place_id=ChIJJYrm1Gu5bzQRW2iEv42LyKM" target="_blank">📍 地圖</a>
+      </div>
+      <div class="food-row">
+        <div class="food-type">點心</div>
+        <div class="food-row-info">
+          <div class="food-row-name">糖廠冰棒</div>
+          <div class="food-row-note">25 元/支｜煉乳・鳳梨口味必選｜台東限定</div>
+        </div>
+        <a class="food-row-map" href="https://www.google.com/maps/search/?api=1&query=%E5%8F%B0%E6%9D%B1%E7%B3%96%E5%BB%A0%E6%96%87%E5%89%B5%E5%9C%92%E5%8D%80" target="_blank">📍 地圖</a>
+      </div>
+      <div class="food-row">
+        <div class="food-type">下午</div>
+        <div class="food-row-info">
+          <div class="food-row-name">廣東路蔥油餅 + 老東方青草茶</div>
+          <div class="food-row-note">現煎蔥油餅｜退火青草茶｜在地人日常</div>
+        </div>
+        <a class="food-row-map" href="https://www.google.com/maps/search/?api=1&query=%E5%8F%B0%E6%9D%B1%E5%BB%A3%E6%9D%B1%E8%B7%AF%E8%94%94%E6%B2%B9%E9%A4%85" target="_blank">📍 地圖</a>
+      </div>
+      <div class="food-row">
+        <div class="food-type">晚餐</div>
+        <div class="food-row-info">
+          <div class="food-row-name">來點感性滷味</div>
+          <div class="food-row-note">⭐ 4.1（940則）｜招牌辣椒醬｜16:00 起</div>
+        </div>
+        <a class="food-row-map" href="https://www.google.com/maps/search/?api=1&query=%E4%BE%86%E9%BB%9E%E6%84%9F%E6%80%A7%E6%BB%B7%E5%91%B3&query_place_id=ChIJe7nkjj65bzQRRkXApzTpNcs" target="_blank">📍 地圖</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sec-divider"></div>
+
+<!-- ===== DAY 2 ===== -->
+<div class="day-section" id="day2">
+  <div class="wrap">
+    <div class="day-hdr">
+      <div class="day-badge"><div class="day-num">D2</div><div class="day-lbl">6/14 週日</div></div>
+      <div class="day-info">
+        <h2>縱谷牧場・紅茶茶香巡禮</h2>
+        <div class="day-meta">台9線縱谷南段 ｜ 退房→換住淘趣漫旅</div>
+        <div class="route-tip">🚙 沿台9線北上縱谷，中央山脈與海岸山脈相夾，6月茶園翠綠迷人，開車本身就是享受</div>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-line"></div>
+
+      <div class="tl-item">
+        <div class="tl-time">08:00<div class="tl-dot"></div></div>
+        <div class="tl-card hotel">
+          <div class="tl-title">那路彎飯店早餐 + 退房<span class="badge b-hotel">含早餐</span></div>
+          <p class="tl-desc">早餐後辦理退房，行李放車上直接出發縱谷。今日傍晚直接入住淘趣漫旅，不需折返。</p>
+        </div>
+      </div>
+
+      <div class="drive"><span class="drive-tag">🚗 台9線北上 約 25 分鐘</span>→ 初鹿牧場</div>
+
+      <div class="tl-item">
+        <div class="tl-time">09:30<div class="tl-dot"></div></div>
+        <div class="tl-card spot">
+          <div class="tl-card-hdr">
+            <div class="tl-title">初鹿牧場<span class="badge b-spot">景點</span></div>
+            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=%E5%88%9D%E9%B9%BF%E7%89%A7%E5%A0%B4&query_place_id=ChIJ7-6P6Mu7bzQRGE-lgZwkypU" target="_blank">📍 導航</a>
+          </div>
+          <div class="star">⭐ 4.2（9,249則）｜ 08:00–17:00 全年無休 ｜ 門票 NT$150</div>
+          <div class="food-must">
+            <div class="food-must-title">必吃</div>
+            <div class="food-pills">
+              <span class="food-pill hot">鮮奶饅頭（限量）</span>
+              <span class="food-pill hot">鮮奶冰淇淋</span>
+              <span class="food-pill">鮮牧場優格</span>
+            </div>
+          </div>
+          <p class="tl-desc">台東最著名的觀光牧場，放牧草坡上點點乳牛是孩子最愛。可餵食小動物、體驗擠牛奶。鮮奶饅頭每日限量，進場後請先搶購！這是初鹿獨家記憶，其他地方吃不到同樣味道。</p>
+          <div class="tl-tip">進場後先搶限量鮮奶饅頭，再慢慢逛草坡餵動物。</div>
+        </div>
+      </div>
+
+      <div class="drive"><span class="drive-tag">🚗 車程約 2 分鐘</span>→ 原生植物園</div>
+
+      <div class="tl-item">
+        <div class="tl-time">12:00<div class="tl-dot"></div></div>
+        <div class="tl-card meal">
+          <div class="tl-card-hdr">
+            <div class="tl-title">午餐・原生應用植物園野菜鍋<span class="badge b-meal">主餐</span></div>
+            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=%E5%8F%B0%E6%9D%B1%E5%8E%9F%E7%94%9F%E6%87%89%E7%94%A8%E6%A4%8D%E7%89%A9%E5%9C%92" target="_blank">📍 導航</a>
+          </div>
+          <div class="food-must">
+            <div class="food-must-title">必點</div>
+            <div class="food-pills">
+              <span class="food-pill hot">養生野菜鍋</span>
+              <span class="food-pill">紅甜菜</span>
+              <span class="food-pill">飛機菜</span>
+              <span class="food-pill">白鶴靈芝茶</span>
+            </div>
+          </div>
+          <p class="tl-desc">就在初鹿牧場旁邊，在滿是藥草香的綠意環境裡享用台東特色野菜鍋，原生蔬菜汆燙後搭配蘸醬，清爽健康。非常適合連早上牧場已大吃一頓後的輕食午餐。</p>
+          <div class="backup-wrap">
+            <div class="backup-lbl">☁ 備案選項</div>
+            <div class="backup-list">
+              <div class="bk-card">
+                <div class="bk-info">
+                  <div class="bk-name">初鹿牧場景觀餐廳</div>
+                  <div class="bk-desc">牧場內鮮奶火鍋套餐，不用移動</div>
+                </div>
+                <a class="bk-map" href="https://www.google.com/maps/search/?api=1&query=%E5%88%9D%E9%B9%BF%E7%89%A7%E5%A0%B4%E6%99%AF%E8%A7%80%E9%A4%90%E5%BB%B3" target="_blank">📍</a>
+              </div>
+              <div class="bk-card">
+                <div class="bk-info">
+                  <div class="bk-name">斑鳩冰品</div>
+                  <div class="bk-desc">釋迦、紅烏龍特色冰淇淋，飯後甜點</div>
+                </div>
+                <a class="bk-map" href="https://www.google.com/maps/search/?api=1&query=%E6%96%91%E9%B3%A9%E5%86%B0%E5%93%81" target="_blank">📍</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="drive"><span class="drive-tag">🚗 台9線北上 約 15 分鐘</span>→ 鹿野</div>
+
+      <div class="tl-item">
+        <div class="tl-time">14:30<div class="tl-dot"></div></div>
+        <div class="tl-card spot">
+          <div class="tl-card-hdr">
+            <div class="tl-title">新元昌紅茶產業文化館<span class="badge b-spot">⭐ 5.0 寶藏景點</span></div>
+            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E5%85%83%E6%98%8C%E7%B4%85%E8%8C%B6%E7%94%A2%E6%A5%AD%E6%96%87%E5%8C%96%E9%A4%A8&query_place_id=ChIJIYrWOLWlbzQRmbbtQWw2Cys" target="_blank">📍 導航</a>
+          </div>
+          <div class="star">⭐ 5.0（1,388則）｜ 09:00–17:00 全年無休 ｜ 免費入場</div>
+          <div class="food-must">
+            <div class="food-must-title">必喝</div>
+            <div class="food-pills">
+              <span class="food-pill hot">鹿野紅烏龍（冠軍茶）</span>
+              <span class="food-pill">蜜香紅茶</span>
+              <span class="food-pill">手工茶點</span>
+            </div>
+          </div>
+          <p class="tl-desc">台東第一家民營紅茶廠，5 星滿分殊為罕見！老闆熱情帶領免費品茶 4–5 種，並帶遊客參觀茶園。我每次帶朋友來都驚嘆不已，是台東最值得去的低調寶藏。記得買幾盒紅烏龍茶帶回家。</p>
+          <div class="tl-tip">主人免費讓你試到滿意為止，完全不強迫消費。停留 1–1.5 小時超值。</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-time">15:30<div class="tl-dot"></div></div>
+        <div class="tl-card spot">
+          <div class="tl-card-hdr">
+            <div class="tl-title">鹿野高台眺望縱谷<span class="badge b-spot">景點</span></div>
+            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=%E5%8F%B0%E6%9D%B1%E9%B9%BF%E9%87%8E%E9%AB%98%E5%8F%B0%E7%86%B1%E6%B0%A3%E7%90%83%E8%8D%89%E5%9C%B0&query_place_id=ChIJPw1o_kmlbzQR_ULviSHnR-M" target="_blank">📍 導航</a>
+          </div>
+          <div class="star">⭐ 4.6（512則）｜ 全天開放 ｜ 免費</div>
+          <p class="tl-desc">熱氣球嘉年華主場地（約 6/28 正式開始，此行可能尚未開幕），但高台俯瞰花東縱谷全景依然壯闊，大草皮讓孩子放電奔跑，是絕佳的黃昏拍攝點。</p>
+        </div>
+      </div>
+
+      <div class="drive"><span class="drive-tag">🚗 台9線南下 約 30 分鐘</span>→ 台東市區</div>
+
+      <div class="tl-item">
+        <div class="tl-time">18:00<div class="tl-dot"></div></div>
+        <div class="tl-card meal">
+          <div class="tl-card-hdr">
+            <div class="tl-title">晚餐・披薩阿伯 Uncle Pete's Pizza<span class="badge b-meal">主餐</span></div>
+            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=%E6%8A%AB%E8%96%A9%E9%98%BF%E4%BC%AF+Uncle+Pete%27s+Pizza" target="_blank">📍 導航</a>
+          </div>
+          <div class="food-must">
+            <div class="food-must-title">必點</div>
+            <div class="food-pills">
+              <span class="food-pill hot">手工美式薄脆披薩</span>
+              <span class="food-pill hot">老闆自製辣油</span>
+              <span class="food-pill">新鮮沙拉</span>
+            </div>
+          </div>
+          <p class="tl-desc">台東超人氣外籍老闆開的手工披薩店，老闆熱情愛跟客人互動，孩子超喜歡這種感覺。記得把老闆自製辣油淋上去！建議提前電話預約。</p>
+          <div class="backup-wrap">
+            <div class="backup-lbl">☁ 備案選項</div>
+            <div class="backup-list">
+              <div class="bk-card">
+                <div class="bk-info">
+                  <div class="bk-name">溫度小館 台東</div>
+                  <div class="bk-desc">精緻溫馨義大利麵與燉飯</div>
+                </div>
+                <a class="bk-map" href="https://www.google.com/maps/search/?api=1&query=%E6%BA%AB%E5%BA%A6%E5%B0%8F%E9%A4%A8+%E5%8F%B0%E6%9D%B1" target="_blank">📍</a>
+              </div>
+              <div class="bk-card">
+                <div class="bk-info">
+                  <div class="bk-name">叮哥茶飲旗艦店</div>
+                  <div class="bk-desc">台東必喝洛神花茶與紅烏龍拿鐵</div>
+                </div>
+                <a class="bk-map" href="https://www.google.com/maps/search/?api=1&query=%E5%8F%AE%E5%93%A5%E8%8C%B6%E9%A3%B2+%E6%97%97%E8%89%A6%E5%BA%97" target="_blank">📍</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="drive"><span class="drive-tag">🚗 車程約 10 分鐘</span>→ 淘趣漫旅</div>
+
+      <div class="tl-item">
+        <div class="tl-time">20:00<div class="tl-dot"></div></div>
+        <div class="tl-card hotel">
+          <div class="tl-title">入住淘趣漫旅（D2–D5 固定住宿）<span class="badge b-hotel">住宿</span></div>
+          <p class="tl-desc">後續三晚固定在此，步行 3 分鐘即達台東火車站，地點超方便。無早餐，請自行安排周邊早餐。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- D2 美食日誌 -->
+    <div class="food-section">
+      <h3>🍽 D2 美食日誌</h3>
+      <div class="food-row">
+        <div class="food-type">午餐</div>
+        <div class="food-row-info">
+          <div class="food-row-name">原生應用植物園野菜鍋</div>
+          <div class="food-row-note">養生原生蔬菜汆燙｜縱谷特色風味</div>
+        </div>
+        <a class="food-row-map" href="https://www.google.com/maps/search/?api=1&query=%E5%8F%B0%E6%9D%B1%E5%8E%9F%E7%94%9F%E6%87%89%E7%94%A8%E6%A4%8D%E7%89%A9%E5%9C%92" target="_blank">📍 地圖</a>
+      </div>
+      <div class="food-row">
+        <div class="food-type">品茶</div>
+        <div class="food-row-info">
+          <div class="food-row-name">新元昌紅茶文化館</div>
+          <div class="food-row-note">⭐ 5.0｜免費品嚐冠軍紅烏龍｜必買茶葉</div>
+        </div>
+        <a class="food-row-map" href="https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E5%85%83%E6%98%8C%E7%B4%85%E8%8C%B6%E7%94%A2%E6%A5%AD%E6%96%87%E5%8C%96%E9%A4%A8&query_place_id=ChIJIYrWOLWlbzQRmbbtQWw2Cys" target="_blank">📍 地圖</a>
+      </div>
+      <div class="food-row">
+        <div class="food-type">晚餐</div>
+        <div class="food-row-info">
+          <div class="food-row-name">披薩阿伯 Uncle Pete's Pizza</div>
+          <div class="food-row-note">手工薄脆披薩｜老闆自製辣油必配</div>
+        </div>
+        <a class="food-row-map" href="https://www.google.com/maps/search/?api=1&query=%E6%8A%AB%E8%96%A9%E9%98%BF%E4%BC%AF+Uncle+Pete%27s+Pizza" target="_blank">📍 地圖</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sec-divider"></div>
+
+<!-- ===== DAY 3 ===== -->
+<div class="day-section" id="day3">
+  <div class="wrap">
+    <div class="day-hdr">
+      <div class="day-badge"><div class="day-num">D3</div><div class="day-lbl">6/15 週一</div></div>
+      <div class="day-info">
+        <h2>池上豆香・武陵監獄咖啡廳</h2>
+        <div class="day-meta">池上→關山→武陵→鹿野 縱谷由北往南 ｜ 住宿：淘趣漫旅</div>
+        <div class="route-tip">🚙 台9線北上至池上後轉南下，一路穿越關山、武陵返回，全程沿縱谷，稻田、茶園、山景連綿不斷</div>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-line"></div>
+
+      <div class="tl-item">
+        <div class="tl-time">07:30<div class="tl-dot"></div></div>
+        <div class="tl-card meal">
+          <div class="tl-card-hdr">
+            <div class="tl-title">早餐・飯店附近自行解決<span class="badge b-meal">早餐</span></div>
+          </div>
+          <p class="tl-desc">今天行程最遠，建議 07:30 用完早餐即出發。叮哥茶飲外帶當早餐飲料一起上路也很方便。</p>
+          <div class="backup-wrap">
+            <div class="backup-lbl">☁ 附近選項</div>
+            <div class="backup-list">
+              <div class="bk-card">
+                <div class="bk-info">
+                  <div class="bk-name">明奎早餐店</div>
+                  <div class="bk-desc">爆紅煉乳法式吐司與桂圓粥，需排隊</div>
+                </div>
+                <a class="bk-map" href="https://www.google.com/maps/search/?api=1&query=%E6%98%8E%E5%A5%8E%E6%97%A9%E9%A4%90%E5%BA%97" target="_blank">📍</a>
+              </div>
+              <div class="bk-card">
+                <div class="bk-info">
+                  <div class="bk-name">中華早點</div>
+                  <div class="bk-desc">台東特色滷肉飯加蛋、現做酥皮蛋餅</div>
+                </div>
+                <a class="bk-map" href="https://www.google.com/maps/search/?api=1&query=%E5%8F%B0%E6%9D%B1%E4%B8%AD%E8%8F%AF%E6%97%A9%E9%BB%9E" target="_blank">📍</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="drive"><span class="drive-tag">🚗 台9線北上 約 50 分鐘</span>→ 池上</div>
+
+      <div class="tl-item">
+        <div class="tl-time">09:00<div class="tl-dot"></div></div>
+        <div class="tl-card snack">
+          <div class="tl-card-hdr">
+            <div class="tl-title">池上豆之間・早點<span class="badge b-snack">早點豆香</span></div>
+            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=%E6%B1%A0%E4%B8%8A%E8%B1%86%E4%B9%8B%E9%96%93" target="_blank">📍 導航</a>
+          </div>
+          <div class="food-must">
+            <div class="food-must-title">必點</div>
+            <div class="food-pills">
+              <span class="food-pill hot">極致厚豆花</span>
+              <span class="food-pill hot">香煎豆包</span>
+              <span class="food-pill">豆湯麵</span>
+              <span class="food-pill">純濃豆漿</span>
+            </div>
+          </div>
+          <p class="tl-desc">池上鄉間特色大型豆製所，現做豆製品香氣撲鼻。剛到池上先在此喝杯豆漿、吃份厚豆花當早點，蛋白質滿滿再去騎車最好！不到 100 元就能吃飽又吃巧。</p>
+          <div class="backup-wrap">
+            <div class="backup-lbl">☁ 備案選項</div>
+            <div class="backup-list">
+              <div class="bk-card">
+                <div class="bk-info">
+                  <div class="bk-name">大池豆皮店</div>
+                  <div class="bk-desc">⭐ 4.2（10,164則）柴燒炸豆包現炸｜07:00–14:00（週三休）｜人氣更高但人潮多</div>
+                </div>
+                <a class="bk-map" href="https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E6%B1%A0%E8%B1%86%E7%9A%AE%E5%BA%97&query_place_id=ChIJR8JM5qywbzQR_DTPxc9Ss-0" target="_blank">📍</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="drive"><span class="drive-tag">🚗 車程約 5 分鐘</span>→ 伯朗大道</div>
+
+      <div class="tl-item">
+        <div class="tl-time">09:45<div class="tl-dot"></div></div>
+        <div class="tl-card spot">
+          <div class="tl-card-hdr">
+            <div class="tl-title">伯朗大道 + 天堂路<span class="badge b-spot">必訪</span></div>
+            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=%E6%B1%A0%E4%B8%8A%E4%BC%AF%E6%9C%97%E5%A4%A7%E9%81%93&query_place_id=ChIJd2XXSp0LbzQRy5ALsA-IYUo" target="_blank">📍 導航</a>
+          </div>
+          <div class="star">⭐ 4.6（6,926則）｜ 全天開放 ｜ 電動腳踏車約 200–300 元/人</div>
+          <p class="tl-desc">台灣最美農村公路，6 月稻田翠綠連天！建議在入口租電動輔助腳踏車暢遊，省力又好玩。金城武樹依然是熱門打卡點，騎到 S 型天堂路回望是最美角度。</p>
+          <div class="tl-warn">出發前請致電武陵咖啡廳預訂烤全雞！☎ 089-581-014#308，約 11:00 前電話，告知約 12:30 用餐（烤雞需提前 70 分鐘）。</div>
+        </div>
+      </div>
+
+      <div class="drive"><span class="drive-tag">🚗 南下台9線 約 20 分鐘</span>→ 關山鎮</div>
+
+      <div class="tl-item">
+        <div class="tl-time">11:30<div class="tl-dot"></div></div>
+        <div class="tl-card spot">
+          <div class="tl-card-hdr">
+            <div class="tl-title">關山米國學校（農會休閒園區）<span class="badge b-spot">景點</span></div>
+            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=%E7%B1%B3%E5%9C%8B%E5%AD%B8%E6%A0%A1&query_place_id=ChIJFwdS3osJbzQRUdZk6fxexSU" target="_blank">📍 導航</a>
+          </div>
+          <div class="star">⭐ 4.1（3,697則）｜ 08:00–17:00 全年無休</div>
+          <div class="food-must">
+            <div class="food-must-title">必買</div>
+            <div class="food-pills">
+              <span class="food-pill hot">關山米乖乖（台東限定）</span>
+              <span class="food-pill">關山頂級白米</span>
+              <span class="food-pill">米系伴手禮</span>
+            </div>
+          </div>
+          <p class="tl-desc">繽紛彩繪外牆超好拍！快速參觀碾米展示與米文化，順便採購關山米乖乖（只有這裡才有的台東限定零食）。</p>
+        </div>
+      </div>
+
+      <div class="drive"><span class="drive-tag">🚗 台9線南下 約 30 分鐘</span>→ 武陵</div>
+
+      <div class="tl-item">
+        <div class="tl-time">12:30<div class="tl-dot"></div></div>
+        <div class="tl-card meal">
+          <div class="tl-card-hdr">
+            <div class="tl-title">午餐・武陵咖啡廳（外役監獄餐廳）<span class="badge b-meal">特色午餐</span></div>
+            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=%E6%AD%A6%E9%99%B5+%E5%92%96%E5%95%A1%E5%BB%B3&query_place_id=ChIJyW5tMGKmbzQRxysif8-p15E" target="_blank">📍 導航</a>
+          </div>
+          <div class="star">⭐ 4.5（340則）｜ 週一–六 09:00–16:00（週日休）｜ ☎ 089-581-014#308</div>
+          <div class="food-must">
+            <div class="food-must-title">必點</div>
+            <div class="food-pills">
+              <span class="food-pill hot">柴燒烤全雞（需提前70分鐘預訂！）</span>
+              <span class="food-pill hot">手工蔥油餅</span>
+              <span class="food-pill">自產手沖咖啡</span>
+              <span class="food-pill">花蓮蓬萊米套餐</span>
+            </div>
+          </div>
+          <p class="tl-desc">台灣唯一對外開放的監獄餐廳！進入需登記身分證，但安全完全無虞——工作人員由受刑人擔任，接受職訓後服務態度相當親切。周圍是歐式城堡建築外觀配大草坪，環境美得讓人驚嘆。招牌柴燒烤雞肉質鮮嫩、皮脆噴香，是台東最獨特的用餐體驗，帶著孩子來一趟別開生面的午餐。</p>
+          <div class="tl-warn">⚠ 烤全雞一定要提前 70 分鐘電話預訂！約在伯朗大道騎車時（11:00 前）致電。身分證入場必備。</div>
+          <div class="backup-wrap">
+            <div class="backup-lbl">☁ 備案（若無法訂位）</div>
+            <div class="backup-list">
+              <div class="bk-card">
+                <div class="bk-info">
+                  <div class="bk-name">悟饕池上飯包文化故事館</div>
+                  <div class="bk-desc">⭐ 3.9（17,111則）池上米木片便當老字號｜10:30–19:00</div>
+                </div>
+                <a class="bk-map" href="https://www.google.com/maps/search/?api=1&query=%E6%82%9F%E9%A5%95%E6%B1%A0%E4%B8%8A%E9%A3%AF%E5%8C%85%E6%96%87%E5%8C%96%E6%95%85%E4%BA%8B%E9%A4%A8&query_place_id=ChIJuYubE4sMbzQR6F0sgiCsdSo" target="_blank">📍</a>
+              </div>
+              <div class="bk-card">
+                <div class="bk-info">
+                  <div class="bk-name">吉本肉圓</div>
+                  <div class="bk-desc">在地人激推 Q 彈紅糟肉圓與四神湯</div>
+                </div>
+                <a class="bk-map" href="https://www.google.com/maps/search/?api=1&query=%E5%90%89%E6%9C%AC%E8%82%89%E5%9C%93" target="_blank">📍</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="drive"><span class="drive-tag">🚗 車程約 10 分鐘</span>→ 鹿野高台</div>
+
+      <div class="tl-item">
+        <div class="tl-time">14:30<div class="tl-dot"></div></div>
+        <div class="tl-card spot">
+          <div class="tl-card-hdr">
+            <div class="tl-title">鹿野高台（飯後散步賞景）<span class="badge b-spot">景點</span></div>
+            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=%E5%8F%B0%E6%9D%B1%E9%B9%BF%E9%87%8E%E9%AB%98%E5%8F%B0%E7%86%B1%E6%B0%A3%E7%90%83%E8%8D%89%E5%9C%B0&query_place_id=ChIJPw1o_kmlbzQR_ULviSHnR-M" target="_blank">📍 導航</a>
+          </div>
+          <div class="star">⭐ 4.6（512則）｜ 全天開放 ｜ 免費</div>
+          <p class="tl-desc">武陵咖啡廳距鹿野高台僅 10 分鐘！飯後散步到大草皮遠眺花東縱谷，孩子可以繼續奔跑放電，看看是否已有熱氣球準備試飛。</p>
+        </div>
+      </div>
+
+      <div class="drive"><span class="drive-tag">🚗 台9線南下 約 40 分鐘</span>→ 台東市區</div>
+
+      <div class="tl-item">
+        <div class="tl-time">16:30<div class="tl-dot"></div></div>
+        <div class="tl-card hotel">
+          <div class="tl-title">返回淘趣漫旅休息 / 戲水<span class="badge b-hotel">住宿</span></div>
+          <p class="tl-desc">一路縱谷南北走完，好好休息充電。晚上出門吃飯就好。</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-time">18:30<div class="tl-dot"></div></div>
+        <div class="tl-card meal">
+          <div class="tl-card-hdr">
+            <div class="tl-title">晚餐・鹿嘉農莊<span class="badge b-meal">主餐</span></div>
+            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=%E9%B9%BF%E5%98%89%E8%BE%B2%E8%8E%8A" target="_blank">📍 導航</a>
+          </div>
+          <p class="tl-desc">鹿野在地農莊特色料理，以縱谷食材研發的茶香無菜單料理，融合在地風土。需提前電話預約。</p>
+          <div class="tl-warn">建議先電話確認是否有位，農莊型餐廳假日座位緊俏。</div>
+          <div class="backup-wrap">
+            <div class="backup-lbl">☁ 備案選項</div>
+            <div class="backup-list">
+              <div class="bk-card">
+                <div class="bk-info">
+                  <div class="bk-name">田媽媽傅姐風味餐</div>
+                  <div class="bk-desc">古法柴燒桶仔雞與客家風味菜</div>
+                </div>
+                <a class="bk-map" href="https://www.google.com/maps/search/?api=1&query=%E7%94%B0%E5%AA%BD%E5%AA%BD%E5%82%85%E5%A7%90%E9%A2%A8%E5%91%B3%E9%A4%90" target="_blank">📍</a>
+              </div>
+              <div class="bk-card">
+                <div class="bk-info">
+                  <div class="bk-name">卑南豬血湯</div>
+                  <div class="bk-desc">台東在地經典，料多大塊</div>
+                </div>
+                <a class="bk-map" href="https://www.google.com/maps/search/?api=1&query=%E5%8D%91%E5%8D%97%E8%B1%AC%E8%A1%80%E6%B9%AF" target="_blank">📍</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-time">20:30<div class="tl-dot"></div></div>
+        <div class="tl-card hotel">
+          <div class="tl-title">返回淘趣漫旅休息</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- D3 美食日誌 -->
+    <div class="food-section">
+      <h3>🍽 D3 美食日誌</h3>
+      <div class="food-row">
+        <div class="food-type">早點</div>
+        <div class="food-row-info">
+          <div class="food-row-name">池上豆之間</div>
+          <div class="food-row-note">厚豆花・香煎豆包・純濃豆漿｜在地豆製所</div>
+        </div>
+        <a class="food-row-map" href="https://www.google.com/maps/search/?api=1&query=%E6%B1%A0%E4%B8%8A%E8%B1%86%E4%B9%8B%E9%96%93" target="_blank">📍 地圖</a>
+      </div>
+      <div class="food-row">
+        <div class="food-type">必買</div>
+        <div class="food-row-info">
+          <div class="food-row-name">關山米乖乖（關山米國學校）</div>
+          <div class="food-row-note">台東限定零食｜伴手禮首選｜08:00起</div>
+        </div>
+        <a class="food-row-map" href="https://www.google.com/maps/search/?api=1&query=%E7%B1%B3%E5%9C%8B%E5%AD%B8%E6%A0%A1&query_place_id=ChIJFwdS3osJbzQRUdZk6fxexSU" target="_blank">📍 地圖</a>
+      </div>
+      <div class="food-row">
+        <div class="food-type">午餐</div>
+        <div class="food-row-info">
+          <div class="food-row-name">武陵咖啡廳（外役監獄餐廳）⚠ 預訂</div>
+          <div class="food-row-note">⭐ 4.5｜柴燒烤雞・手工蔥油餅｜需70分鐘前預訂 ☎ 089-581-014#308</div>
+        </div>
+        <a class="food-row-map" href="https://www.google.com/maps/search/?api=1&query=%E6%AD%A6%E9%99%B5+%E5%92%96%E5%95%A1%E5%BB%B3&query_place_id=ChIJyW5tMGKmbzQRxysif8-p15E" target="_blank">📍 地圖</a>
+      </div>
+      <div class="food-row">
+        <div class="food-type">晚餐</div>
+        <div class="food-row-info">
+          <div class="food-row-name">鹿嘉農莊</div>
+          <div class="food-row-note">縱谷無菜單茶香料理｜需提前預約</div>
+        </div>
+        <a class="food-row-map" href="https://www.google.com/maps/search/?api=1&query=%E9%B9%BF%E5%98%89%E8%BE%B2%E8%8E%8A" target="_blank">📍 地圖</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sec-divider"></div>
+
+<!-- ===== DAY 4 ===== -->
+<div class="day-section" id="day4">
+  <div class="wrap">
+    <div class="day-hdr">
+      <div class="day-badge"><div class="day-num">D4</div><div class="day-lbl">6/16 週二</div></div>
+      <div class="day-info">
+        <h2>海線台11・史前文明與原民風味</h2>
+        <div class="day-meta">富山護漁 → 台11線 → 史前博物館 → 原民晚餐 ｜ 住宿：淘趣漫旅</div>
+        <div class="route-tip">🚙 台11線海岸公路，左山右海，太平洋波瀾壯闊，是台灣最美省道之一</div>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-line"></div>
+
+      <div class="tl-item">
+        <div class="tl-time">08:30<div class="tl-dot"></div></div>
+        <div class="tl-card meal">
+          <div class="tl-card-hdr">
+            <div class="tl-title">早餐・台東市區<span class="badge b-meal">早餐</span></div>
+          </div>
+          <div class="backup-wrap">
+            <div class="backup-lbl">早餐選項</div>
+            <div class="backup-list">
+              <div class="bk-card">
+                <div class="bk-info">
+                  <div class="bk-name">中華早點</div>
+                  <div class="bk-desc">古早味滷肉飯加蛋、現做酥皮蛋餅</div>
+                </div>
+                <a class="bk-map" href="https://www.google.com/maps/search/?api=1&query=%E5%8F%B0%E6%9D%B1%E4%B8%AD%E8%8F%AF%E6%97%A9%E9%BB%9E" target="_blank">📍</a>
+              </div>
+              <div class="bk-card">
+                <div class="bk-info">
+                  <div class="bk-name">明奎早餐店</div>
+                  <div class="bk-desc">爆紅煉乳法式吐司，建議提早出發排隊</div>
+                </div>
+                <a class="bk-map" href="https://www.google.com/maps/search/?api=1&query=%E6%98%8E%E5%A5%8E%E6%97%A9%E9%A4%90%E5%BA%97" target="_blank">📍</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="drive"><span class="drive-tag">🚗 台11線北上 約 20 分鐘</span>→ 富山護漁步道</div>
+
+      <div class="tl-item">
+        <div class="tl-time">10:00<div class="tl-dot"></div></div>
+        <div class="tl-card spot">
+          <div class="tl-card-hdr">
+            <div class="tl-title">富山護漁步道<span class="badge b-spot">景點</span></div>
+            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=%E5%AF%8C%E5%B1%B1%E8%AD%B7%E6%BC%81%E5%8D%80&query_place_id=ChIJ13X-u728bzQRF_7gbk2hI28" target="_blank">📍 導航</a>
+          </div>
+          <div class="star">⭐ 4.2（8,835則）｜ 08:00–17:00 ｜ 步道免費，潮間帶約 60 元</div>
+          <p class="tl-desc">清澈見底的潮間帶，豐富魚群螃蟹近在眼前！可購買饅頭餵魚（護漁區限定食物）。帶孩子來這裡不到 30 分鐘就能看到上百隻魚悠游，是最親近大海的方式。</p>
+          <div class="tl-tip">穿好走的鞋，礁石路段需小心。不要穿拖鞋進潮間帶。</div>
+        </div>
+      </div>
+
+      <div class="drive"><span class="drive-tag">🚗 步行可達</span>→ 午餐</div>
+
+      <div class="tl-item">
+        <div class="tl-time">12:00<div class="tl-dot"></div></div>
+        <div class="tl-card meal">
+          <div class="tl-card-hdr">
+            <div class="tl-title">午餐・可可娜咖啡館<span class="badge b-meal">主餐</span></div>
+            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=%E5%8F%AF%E5%8F%AF%E5%A8%9C%E5%92%96%E5%95%A1" target="_blank">📍 導航</a>
+          </div>
+          <div class="food-must">
+            <div class="food-must-title">必點</div>
+            <div class="food-pills">
+              <span class="food-pill hot">現剖椰子水</span>
+              <span class="food-pill hot">打拋豬飯</span>
+              <span class="food-pill">南洋咖哩</span>
+              <span class="food-pill">水果茶</span>
+            </div>
+          </div>
+          <p class="tl-desc">緊鄰護漁步道的南洋風情咖啡館，高大椰子樹、茅草屋配蔚藍太平洋海景，坐在海邊吃飯的感覺無可取代。</p>
+          <div class="backup-wrap">
+            <div class="backup-lbl">☁ 備案選項</div>
+            <div class="backup-list">
+              <div class="bk-card">
+                <div class="bk-info">
+                  <div class="bk-name">小魚兒的家</div>
+                  <div class="bk-desc">IG 熱門海景第一排親子景觀餐廳</div>
+                </div>
+                <a class="bk-map" href="https://www.google.com/maps/search/?api=1&query=%E5%B0%8F%E9%AD%9A%E5%85%92%E7%9A%84%E5%AE%B6" target="_blank">📍</a>
+              </div>
+              <div class="bk-card">
+                <div class="bk-info">
+                  <div class="bk-name">藍色海灣 Bluebayou</div>
+                  <div class="bk-desc">⭐ 4.7（1,320則）太平洋海景咖啡廳（稍遠約 20 分鐘）</div>
+                </div>
+                <a class="bk-map" href="https://www.google.com/maps/search/?api=1&query=%E8%97%8D%E8%89%B2%E6%B5%B7%E7%81%A3Bluebayou&query_place_id=ChIJz392SdCjbzQRrY6pKAllfZA" target="_blank">📍</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="drive"><span class="drive-tag">🚗 返回台東市區 約 25 分鐘</span>→ 史前博物館</div>
+
+      <div class="tl-item">
+        <div class="tl-time">14:30<div class="tl-dot"></div></div>
+        <div class="tl-card spot">
+          <div class="tl-card-hdr">
+            <div class="tl-title">國立台灣史前文化博物館<span class="badge b-spot">必訪</span></div>
+            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=%E5%9C%8B%E7%AB%8B%E8%87%BA%E7%81%A3%E5%8F%B2%E5%89%8D%E6%96%87%E5%8C%96%E5%8D%9A%E7%89%A9%E9%A4%A8&query_place_id=ChIJgS3U1LG5bzQRAlR1EkfxCn0" target="_blank">📍 導航</a>
+          </div>
+          <div class="star">⭐ 4.5（9,561則）｜ 週二–日 09:00–17:00（週一休）｜ 成人 NT$150 / 兒童 NT$75</div>
+          <p class="tl-desc">台東最值得深度探索的博物館！從三萬年前史前文明到台灣南島文化，沉浸式史前劇場讓孩子印象深刻，互動展示區讓 13 歲的孩子能玩上一小時不想走。建議搭配館內導覽（須預約）。</p>
+          <div class="tl-tip">停留 2 小時最充裕。週二人潮較少，是最佳參觀時機。</div>
+        </div>
+      </div>
+
+      <div class="drive"><span class="drive-tag">🚗 車程約 12 分鐘</span>→ 飯店梳洗</div>
+
+      <div class="tl-item">
+        <div class="tl-time">17:30<div class="tl-dot"></div></div>
+        <div class="tl-card hotel">
+          <div class="tl-title">返回淘趣漫旅梳洗休息</div>
+        </div>
+      </div>
+
+      <div class="drive"><span class="drive-tag">🚗 車程約 12 分鐘</span>→ 晚餐</div>
+
+      <div class="tl-item">
+        <div class="tl-time">18:30<div class="tl-dot"></div></div>
+        <div class="tl-card meal">
+          <div class="tl-card-hdr">
+            <div class="tl-title">晚餐・米巴奈山地美食坊<span class="badge b-meal">主餐</span></div>
+            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=%E7%B1%B3%E5%B7%B4%E5%A5%88%E5%B1%B1%E5%9C%B0%E7%BE%8E%E9%A3%9F%E5%9D%8A" target="_blank">📍 導航</a>
+          </div>
+          <div class="food-must">
+            <div class="food-must-title">必點</div>
+            <div class="food-pills">
+              <span class="food-pill hot">山地糯米飯</span>
+              <span class="food-pill hot">現烤脆口春筍</span>
+              <span class="food-pill">原民風味烤豬肉</span>
+              <span class="food-pill">馬告野菜湯</span>
+            </div>
+          </div>
+          <p class="tl-desc">道地原住民風味料理，讓孩子嘗試不同於日常的飲食文化。特色糯米飯、烤春筍等原民食材是台東獨有的飲食記憶。</p>
+          <div class="backup-wrap">
+            <div class="backup-lbl">☁ 備案選項</div>
+            <div class="backup-list">
+              <div class="bk-card">
+                <div class="bk-info">
+                  <div class="bk-name">原始部落風味餐廳</div>
+                  <div class="bk-desc">山頂俯瞰台東夜景、現烤原民烤雞</div>
+                </div>
+                <a class="bk-map" href="https://www.google.com/maps/search/?api=1&query=%E5%8E%9F%E5%A7%8B%E9%83%A8%E8%90%BD%E9%A2%A8%E5%91%B3%E9%A4%90%E5%BB%B3" target="_blank">📍</a>
+              </div>
+              <div class="bk-card">
+                <div class="bk-info">
+                  <div class="bk-name">卑南豬血湯</div>
+                  <div class="bk-desc">台東在地經典，料多大塊份量實在</div>
+                </div>
+                <a class="bk-map" href="https://www.google.com/maps/search/?api=1&query=%E5%8D%91%E5%8D%97%E8%B1%AC%E8%A1%80%E6%B9%AF" target="_blank">📍</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-time">20:30<div class="tl-dot"></div></div>
+        <div class="tl-card hotel">
+          <div class="tl-title">返回淘趣漫旅休息</div>
+          <p class="tl-desc">明天是最後一天，可在飯店附近 7-11 挑選台東小零食當宵夜或明日路上吃。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- D4 美食日誌 -->
+    <div class="food-section">
+      <h3>🍽 D4 美食日誌</h3>
+      <div class="food-row">
+        <div class="food-type">午餐</div>
+        <div class="food-row-info">
+          <div class="food-row-name">可可娜咖啡館</div>
+          <div class="food-row-note">南洋海景｜現剖椰子水・打拋豬飯</div>
+        </div>
+        <a class="food-row-map" href="https://www.google.com/maps/search/?api=1&query=%E5%8F%AF%E5%8F%AF%E5%A8%9C%E5%92%96%E5%95%A1" target="_blank">📍 地圖</a>
+      </div>
+      <div class="food-row">
+        <div class="food-type">晚餐</div>
+        <div class="food-row-info">
+          <div class="food-row-name">米巴奈山地美食坊</div>
+          <div class="food-row-note">原民糯米飯・烤春筍・馬告野菜</div>
+        </div>
+        <a class="food-row-map" href="https://www.google.com/maps/search/?api=1&query=%E7%B1%B3%E5%B7%B4%E5%A5%88%E5%B1%B1%E5%9C%B0%E7%BE%8E%E9%A3%9F%E5%9D%8A" target="_blank">📍 地圖</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sec-divider"></div>
+
+<!-- ===== DAY 5 ===== -->
+<div class="day-section" id="day5">
+  <div class="wrap">
+    <div class="day-hdr">
+      <div class="day-badge"><div class="day-num">D5</div><div class="day-lbl">6/17 週三</div></div>
+      <div class="day-info">
+        <h2>森林公園・伴手禮・還車返家</h2>
+        <div class="day-meta">台東市區 ｜ ⚠ 還車 12:30 → 火車 13:00</div>
+        <div class="route-tip">🚙 今日時間緊，12:30 務必到直航租車！建議 11:45 前吃完午餐</div>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-line"></div>
+
+      <div class="tl-item">
+        <div class="tl-time">07:30<div class="tl-dot"></div></div>
+        <div class="tl-card meal">
+          <div class="tl-card-hdr">
+            <div class="tl-title">早餐・曙光森林<span class="badge b-meal">早餐</span></div>
+            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=%E6%9B%99%E5%85%89%E6%A3%AE%E6%9E%97" target="_blank">📍 導航</a>
+          </div>
+          <div class="food-must">
+            <div class="food-must-title">必點</div>
+            <div class="food-pills">
+              <span class="food-pill hot">手工窯烤麵包拼盤</span>
+              <span class="food-pill">紅烏龍茶飲</span>
+              <span class="food-pill">鮮果優格</span>
+            </div>
+          </div>
+          <p class="tl-desc">木香與植物綠意空間中享用手工窯烤麵包，是告別台東最美好的早晨儀式。</p>
+          <div class="backup-wrap">
+            <div class="backup-lbl">☁ 備案選項</div>
+            <div class="backup-list">
+              <div class="bk-card">
+                <div class="bk-info">
+                  <div class="bk-name">換個魚肚白</div>
+                  <div class="bk-desc">文青風三明治早午餐，食材精選</div>
+                </div>
+                <a class="bk-map" href="https://www.google.com/maps/search/?api=1&query=%E6%8F%9B%E5%80%8B%E9%AD%9A%E8%82%9A%E7%99%BD" target="_blank">📍</a>
+              </div>
+              <div class="bk-card">
+                <div class="bk-info">
+                  <div class="bk-name">世紀全開早餐</div>
+                  <div class="bk-desc">在地人大推手工粉漿蛋餅，量大划算</div>
+                </div>
+                <a class="bk-map" href="https://www.google.com/maps/search/?api=1&query=%E4%B8%96%E7%B4%80%E5%85%A8%E9%96%8B%E6%97%A9%E9%A4%90" target="_blank">📍</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="drive"><span class="drive-tag">🚗 車程約 5 分鐘</span>→ 台東森林公園</div>
+
+      <div class="tl-item">
+        <div class="tl-time">08:30<div class="tl-dot"></div></div>
+        <div class="tl-card spot">
+          <div class="tl-card-hdr">
+            <div class="tl-title">台東森林公園・琵琶湖<span class="badge b-spot">景點</span></div>
+            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=%E5%8F%B0%E6%9D%B1%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9C%92&query_place_id=ChIJx9oJH165bzQRHtM1Bkgvyyo" target="_blank">📍 導航</a>
+          </div>
+          <div class="star">⭐ 4.4（15,635則）｜ 07:00–18:00 ｜ NT$80/人</div>
+          <p class="tl-desc">台東最美城市公園！早晨琵琶湖倒影如鏡，木麻黃林道清幽。強烈建議園內租電動腳踏車（約 200 元），讓孩子自由穿梭林間。最後一天最放鬆的告別時光。</p>
+          <div class="tl-tip">早晨光線拍琵琶湖倒影最美，帶孩子到湖邊拍一張全家福留念！</div>
+        </div>
+      </div>
+
+      <div class="drive"><span class="drive-tag">🚗 車程約 10 分鐘</span>→ 伴手禮採購</div>
+
+      <div class="tl-item">
+        <div class="tl-time">10:30<div class="tl-dot"></div></div>
+        <div class="tl-card snack">
+          <div class="tl-card-hdr">
+            <div class="tl-title">伴手禮採購・台東市農會<span class="badge b-snack">購物</span></div>
+            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=%E5%8F%B0%E6%9D%B1%E5%B8%82%E8%BE%B2%E6%9C%83" target="_blank">📍 農會</a>
+          </div>
+          <div class="food-must">
+            <div class="food-must-title">必買清單</div>
+            <div class="food-pills">
+              <span class="food-pill hot">洛神花乾（台東特產）</span>
+              <span class="food-pill hot">夏威夷豆塔</span>
+              <span class="food-pill">鹿野紅烏龍茶葉</span>
+              <span class="food-pill">台東紅藜米</span>
+              <span class="food-pill">關山米乖乖</span>
+            </div>
+          </div>
+          <p class="tl-desc">台東市農會品質保障、價格實惠，是採購伴手禮的最佳選擇。最後一次掃貨！</p>
+        </div>
+      </div>
+
+      <div class="drive"><span class="drive-tag">🚗 車程約 8 分鐘</span>→ 午餐</div>
+
+      <div class="tl-item">
+        <div class="tl-time">11:30<div class="tl-dot"></div></div>
+        <div class="tl-card meal">
+          <div class="tl-card-hdr">
+            <div class="tl-title">最後一餐・葉氏海鮮<span class="badge b-meal">主餐</span></div>
+            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=%E5%8F%B0%E6%9D%B1%E8%91%89%E6%B0%8F%E6%B5%B7%E9%AE%AE" target="_blank">📍 導航</a>
+          </div>
+          <div class="food-must">
+            <div class="food-must-title">必點</div>
+            <div class="food-pills">
+              <span class="food-pill hot">厚切生魚片（高CP值）</span>
+              <span class="food-pill hot">鮮甜白蝦</span>
+              <span class="food-pill">干貝</span>
+              <span class="food-pill">砂鍋魚頭</span>
+            </div>
+          </div>
+          <p class="tl-desc">台東市區知名海產店，用澎湃的頂級台東海味為整趟旅程畫下完美句點！台東得天獨厚的海洋位置造就這裡的海鮮品質超群。</p>
+          <div class="tl-warn">⚠ 11:45 前吃完，12:30 要到直航租車還車！</div>
+          <div class="backup-wrap">
+            <div class="backup-lbl">☁ 備案（快速）</div>
+            <div class="backup-list">
+              <div class="bk-card">
+                <div class="bk-info">
+                  <div class="bk-name">藍蜻蜓速食專賣店</div>
+                  <div class="bk-desc">台東經典台式炸雞，快速不用久等</div>
+                </div>
+                <a class="bk-map" href="https://www.google.com/maps/search/?api=1&query=%E8%97%8D%E8%9C%BB%E8%9C%93%E9%80%9F%E9%A3%9F%E5%B0%88%E8%B3%A3%E5%BA%97" target="_blank">📍</a>
+              </div>
+              <div class="bk-card">
+                <div class="bk-info">
+                  <div class="bk-name">林家臭豆腐</div>
+                  <div class="bk-desc">排隊外酥內嫩韭菜臭豆腐</div>
+                </div>
+                <a class="bk-map" href="https://www.google.com/maps/search/?api=1&query=%E6%9E%97%E5%AE%B6%E8%87%AD%E8%B1%86%E8%85%90" target="_blank">📍</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="drive"><span class="drive-tag">加油 → 直航租車</span></div>
+
+      <div class="tl-item">
+        <div class="tl-time">12:30<div class="tl-dot"></div></div>
+        <div class="tl-card spot" style="border-left:3px solid var(--warn)">
+          <div class="tl-card-hdr">
+            <div class="tl-title">還車・直航租車台東站前店<span class="badge b-warn">⚠ 準時</span></div>
+            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=%E7%9B%B4%E8%88%AA%E7%A7%9F%E8%BB%8Ax%E5%8F%B0%E6%9D%B1%E7%AB%99%E5%89%8D%E5%BA%97&query_place_id=ChIJkd3HLi26bzQRUfEq2WChEqE" target="_blank">📍 導航</a>
+          </div>
+          <p class="tl-desc">還車前先在旁邊 CPC 加油站加滿油。還車手續完成後步行約 10 分鐘即達台東火車站，工作人員通常可協助叫車送到車站。</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-time">13:00<div class="tl-dot"></div></div>
+        <div class="tl-card hotel" style="background:var(--terra-l);border-color:var(--terra)">
+          <div class="tl-title" style="color:var(--terra-d)">🚂 台東火車站・出發返家</div>
+          <p class="tl-desc" style="color:var(--ink-m)">帶著滿滿的回憶與伴手禮，告別這片山海之地。下次再來台東，相信你們一定會的 ☀</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- D5 美食日誌 -->
+    <div class="food-section">
+      <h3>🍽 D5 美食日誌</h3>
+      <div class="food-row">
+        <div class="food-type">早餐</div>
+        <div class="food-row-info">
+          <div class="food-row-name">曙光森林</div>
+          <div class="food-row-note">手工窯烤麵包・紅烏龍茶｜木質綠意空間</div>
+        </div>
+        <a class="food-row-map" href="https://www.google.com/maps/search/?api=1&query=%E6%9B%99%E5%85%89%E6%A3%AE%E6%9E%97" target="_blank">📍 地圖</a>
+      </div>
+      <div class="food-row">
+        <div class="food-type">午餐</div>
+        <div class="food-row-info">
+          <div class="food-row-name">葉氏海鮮 ⚠ 11:45前離開</div>
+          <div class="food-row-note">厚切生魚片・鮮蝦干貝｜完美旅程收尾</div>
+        </div>
+        <a class="food-row-map" href="https://www.google.com/maps/search/?api=1&query=%E5%8F%B0%E6%9D%B1%E8%91%89%E6%B0%8F%E6%B5%B7%E9%AE%AE" target="_blank">📍 地圖</a>
+      </div>
+      <div class="food-row">
+        <div class="food-type">必買</div>
+        <div class="food-row-info">
+          <div class="food-row-name">台東市農會伴手禮</div>
+          <div class="food-row-note">洛神花乾・夏威夷豆塔・紅藜米・紅烏龍</div>
+        </div>
+        <a class="food-row-map" href="https://www.google.com/maps/search/?api=1&query=%E5%8F%B0%E6%9D%B1%E5%B8%82%E8%BE%B2%E6%9C%83" target="_blank">📍 地圖</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BOTTOM NAV -->
+<nav class="day-nav" aria-label="天數導覽">
+  <a href="#day1">D1 市區</a>
+  <a href="#day2">D2 縱谷</a>
+  <a href="#day3">D3 池上</a>
+  <a href="#day4">D4 海線</a>
+  <a href="#day5">D5 還車</a>
 </nav>
+
+<footer>
+  台東在地旅遊作家私藏行程 · 2026/6/13–17 版本<br>
+  所有餐廳建議提前電話確認營業狀態 · 祝全家畢業旅行愉快！🌿
+</footer>
 
 </body>
 </html>
